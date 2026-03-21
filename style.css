@@ -119,6 +119,349 @@ body {
 
 /* END OF DEALS SECTION */
 
+/* START OF REVIEWS SECTION*/
+
+.reviews-container {
+    height: 62rem;
+   
+}
+
+.first-contentbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-contentbox h1 {
+  margin-bottom: 1.5rem;
+}
+
+.first-contentbox p {
+    font-family: helvetica, sans-serif;
+    font-size: 17px;
+    color: gray;
+}
+
+.main-box {
+    display: flex;
+    justify-content: space-between; /* Pushes one to the start, one to the end */
+    align-items: center;            /* Centers them vertically within your 13rem height */
+    padding: 2rem;
+    height: 13rem;
+    background: #f9f9f9;            /* Matching the light background in your photo */
+    border-radius: 15px;
+    width: 50rem;
+    margin-top: 2rem;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side styling */
+.rating-left {
+    text-align: center;
+    flex: 1; /* Takes up equal space */
+}
+
+.rating-left h5 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;             /* Space between stars */
+    font-size: 3rem;    /* Adjust size as needed */
+    margin-left: 6rem;
+}
+
+.stars .filled {
+    color: #ffb400;       /* The "Gold" rating color */
+}
+
+.stars .empty {
+    color: #e0e0e0;       /* Light gray for the empty star */
+}
+
+/* Right side styling (The 3 lines) */
+.rating-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stacks the 3 bars vertically */
+    gap: 10px;             /* Space between the bars */
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* The actual Progress Bar look */
+.bar {
+    flex-grow: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff416c, #be25a7); /* Matching your gradient look */
+}
+
+
+.flexbox-section1 {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    
+}
+
+.flexbox-section2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+
+     background: #f9f9f9;  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+     height: 200px;
+     width: 23rem;
+}
+
+/* START OF BOX1 PROPERTIES */
+.star-rating {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    line-height: 1.5;
+}
+
+.Maria {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date {
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* END OF BOX1 PROPERTIES */
+
+/* START OF BOX2 PROPERTIES */
+.star-rating2 {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled2 {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment2 {
+    line-height: 1.5;
+}
+
+.Jennifer {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date2 {
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/* END OF BOX2 PROPERTIES */
+/* START OF BOX3 PROPERTIES */
+.star-rating3 {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled3 {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment3 {
+    line-height: 1.5;
+}
+
+.Anna {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date3 {
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/*END OF BOX3 PROPERTIES */
+/*START OF BOX4 PROPERTIES */
+
+.star-rating4 {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled4 {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment4 {
+    line-height: 1.5;
+}
+
+.Carla {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date4 {
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/*END OF BOX4 PROPERTIES*/
+/*START OF BOX5 PROPERTIES */
+
+.star-rating5 {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled5 {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.star.filled-empty {
+    color: #e0e0e0;    
+}
+
+.comment5 {
+    line-height: 1.5;
+}
+
+.Diana {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date5 {
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/*END OF BOX5 PROPERTIES */
+
+/*START OF BOX6 PROPERTIES */
+.star-rating6 {
+    display: flex;
+    gap: 4px;             /* Space between stars */
+    font-size: 1.8rem;    /* Adjust size to fit your 13rem box */
+    margin-bottom: 1rem;
+}
+
+.star.filled6 {
+    color: #FFD700;       /* Gold color */
+    
+    /* Optional: A very subtle shadow to make them look "3D" */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.comment6 {
+    line-height: 1.5;
+}
+
+.Grace {
+    margin-top: 1rem;
+    margin-left: 10px;
+}
+
+.date6 {
+
+    color: gray;
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+/*END OF BOX6 PROPERTIES */
+
+.button-content {
+    
+    display: flex;
+    flex-direction: column;
+     justify-content: start;
+     align-items: center;
+     gap: 20px;
+}
+
+/* BUTTON SECTION STARTS HERE */
+
+.button-content p {
+    color: rgb(101, 101, 101);
+}
+
+.button-content button {
+    border: none;
+    background-color: rgb(223, 70, 187);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 3rem;
+    width: 15rem;
+}
+
+/* END OF REVIEWS SECTION */
+/* REVAMONTE PART END HHERE */
+
 /* START OF VMGO SECTION */
 .vmgo-container {
     display: grid;
