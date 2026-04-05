@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* END OF UNIVERSAL SELECTOR*/
@@ -184,200 +185,533 @@ nav {
 
 /* END OF DEALS SECTION */
 
-/* START OF PRODUCTS SECTION */
-.products-section {
-    padding: 60px 20px;
-    text-align: center;
+/* Products Section */
+
+/* 1. The Grid Container */
+.grid-container {
+  display: grid;
+  /* Creates 3 columns. Change 20rem to 18rem if they feel too wide */
+  grid-template-columns: repeat(3, 20rem);
+  gap: 2.5rem; /* Space between boxes */
+  justify-content: center;
+  padding: 3rem 1rem;
 }
 
-.products-text h2 {
+/* 2. The Main Card */
+.grid-box {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden; /* Clips the pink section to the card's rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.grid-box:hover {
+  transform: translateY(-8px); /* Nice hover effect for your project */
+}
+
+.second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.second-container h1 {
+    font-family: Verdana;
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
-.products-text p {
-    margin-bottom: 40px;
+.second-container p {
+    font-family: Helvetica, sans-serif;
+    color: gray;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.6;
 }
 
-.products-main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* 3. Image Section */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 18rem; /* Controls how much space the photo takes */
 }
 
-.product-card {
-    border: 1px solid #eee;
-    padding: 20px;
-    text-align: left;
-    transition: box-shadow 0.3s ease;
-    background-color: #fff;
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures photos don't look squashed */
 }
 
-.product-image {
-    position: relative;
-    margin-bottom: 15px;
+.tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.product-image img {
-    width: 100%;
-    border-radius: 10px;
+/* 4. The Pink Info Section */
+.product-info {
+  background-color: #fdf0f5; /* Light Pink matching your photo */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.product-category {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #fff;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 50px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.title {
+  font-family: "Arial Black", sans-serif; /* Heavy font for that bold look */
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0;
 }
 
-.product-name {
-    font-weight: bold;
-    margin-bottom: 5px;
+.stars {
+  font-size: 0.9rem;
+  color: #ffb400;
 }
 
-.product-rating {
-    margin-bottom: 10px;
+.count {
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: 5px;
 }
 
-.product-price {
-    font-weight: bold;
-    margin-bottom: 10px;
+/* 5. Bottom Row: Price & Button */
+.price-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.product-description {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+.price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #e91e63; /* Bold Pink color */
+  margin: 0;
+  font-family: Verdana;
 }
 
-.product-details {
-    list-style: none;
-    padding: 0;
-    font-size: 0.85rem;
-    margin-bottom: 15px;
+.tag {
+  color: gray;
+  font-family: Verdana;
 }
 
-.product-details li {
-    margin-bottom: 5px;
+.cart-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-/* END OF PRODUCTS SECTION */
-
-/* START OF REVIEWS SECTION*/
-.review-section {
-    height: 70rem;
+.cart-btn:hover {
+  background-color: #c2185b; /* Darkens slightly on hover */
 }
 
-.text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+/* End of Products Section */ 
 
+/* Review Section */
+
+/* Container for the whole reviews section */
+.reviews-wrapper {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-.text-container p {
-    color: rgb(143, 143, 143);
-    font-family: helvetica, sans-serif;
+.reviews-section {
+  max-width: 80rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.firstbox-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-
-
+.reviews-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.reviews-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+.reviews-header p {
+  color: #555;
+  margin-top: 0.5rem;
 }
 
-.firstmain-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 13rem;
-    width: 40rem;
-
+/* Summary Stats */
+.stats-summary-box {
+  width: 100%;
+  max-width: 40rem;
+  border: 1.5px solid #ffcada;
+  border-radius: 25px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
 }
 
-.flexbox1-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5rem;
-    flex-wrap: wrap;
+.left-score {
+  flex: 1;
+  text-align: center;
+}
+.big-score {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+}
+.right-bars {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #666;
+}
+.bar-track {
+  flex-grow: 1;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: #e91e63;
+  border-radius: 10px;
 }
 
-.flexbox2-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 5rem;
-    flex-wrap: wrap;
+/* The Grid for 6 Boxes */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* This makes 3 columns */
+  gap: 1.5rem;
+  width: 100%;
 }
 
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6 {
-
-    background: #f9f9f9;
-    height: 200px;
-    width: 23rem;
+.review-card {
+  border: 1.5px solid #ffcada;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6,
-p {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-
+.stars {
+  color: #ffb400;
+  font-size: 1.2rem;
+}
+.feedback {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+.customer-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #fff0f5;
+}
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+.date-purchased {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0;
+}
+.right-verified {
+  color: #28a745;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.button-section {
-    text-align: center;
-    margin-top: 20px;
+/* Footer Button */
+.action-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+.review-btn {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
-/* END OF REVIEWS SECTION */
 
-/* START OF VMGO SECTION */
-.about-text {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
+/* Review Section End */
+
+/* VMGO SECTION */
 
 .vmgo-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
 
 }
 
-.vmgo-card {
-    padding: 40px 30px;
-    border: 1px solid #eee;
+.history-container h1 {
+ font-family: Verdana;
+ margin-left: 2rem;
+ margin-bottom: 1rem;
+
 }
 
-/* END OF VMGO SECTION */
+.history-container p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  color: gray;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+
+  /* THIS REPLACES THE <BR> TAGS */
+  max-width: 40rem; /* Limits the width so lines don't get too long and hard to read */
+  line-height: 1.6;  /* Adds space between lines for a professional look */
+}
+
+.right-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 30rem;
+  margin-right: 3rem; 
+}
+
+.right-content div {
+  background-color: #ffffff;
+  border: 1.5px solid rgb(254, 149, 166);
+  border-radius: 8px;
+   height: 8rem;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+    align-items: center;
+}
+
+.right-content p {
+  font-family: verdana;
+  font-size:  1rem;
+  color: gray;
+}
+
+.right-content h1 {
+  color: rgb(255, 9, 153);
+  font-weight: bold; 
+  font-family: sans-serif;
+}
+
+.vmgocards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.vision-card {
+  background-color: #ffffff;
+  border: 1.5px gray solid;
+  border-radius: 8px;
+   box-shadow: 0px 0px 2px 0px rgba(112, 110, 110, 0.7);
+  height: 17rem;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-left: 2rem;
+}
+
+.vision-card img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.vision-card h2 {
+  font-family: verdana;
+  margin-bottom: 1rem;
+}
+
+.vision-card p {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: verdana;
+  line-height: 1.5;
+}
+
+.vision-card img,
+.vision-card h2,
+.vision-card p {
+  margin-bottom: 1rem;
+}
+
+
+
+.mission-card {
+ background-color: #ffffff;
+  border: 1.5px solid gray;
+  border-radius: 8px;
+   box-shadow: 0px 0px 2px 0px rgba(112, 110, 110, 0.7);
+  height: 17rem;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-left: 2rem;
+}
+
+.mission-card img {
+  width: 2rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.mission-card h2 {
+  font-family: verdana;
+  margin-bottom: 1rem;
+}
+
+.mission-card p {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: verdana;
+  line-height: 1.5;
+}
+
+.mission-card img,
+.mission-card h2
+ {
+  margin-top: 1rem;
+}
+
+.goals-card {
+ background-color: #ffffff;
+  border: 1.5px solid gray;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgba(112, 110, 110, 0.7);
+  height:17rem;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  margin-left: 2rem;
+}
+
+.goals-card img {
+  width: 2rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.goals-card h2 {
+  font-family: verdana;
+  margin-bottom: 1rem;
+}
+
+.goals-card ul {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: verdana;
+  line-height: 1.5;
+}
+
+.goals-card img {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vmgo-footer {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.check-content,
+.delivery-content,
+.heart-content,
+.star-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.check-content img,
+.delivery-content img,
+.heart-content img,
+.star-content img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.check-content h2,
+.delivery-content h2,
+.heart-content h2,
+.star-content h2 {
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.check-content p,
+.delivery-content p,
+.heart-content p,
+.star-content p {
+  font-family: verdana;
+  color: gray;
+  font-size: 0.875rem;
+
+  /* Forces the break line */
+  max-width: 17rem; 
+  text-align: center;
+  line-height: 1.4;
+}
+
+/*vgmo section end*/
 
 /* START OF CTA SECTION */
 .cta {
