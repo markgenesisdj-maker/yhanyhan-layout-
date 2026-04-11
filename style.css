@@ -402,9 +402,9 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   max-width: 80rem;
   gap: 2.5rem;
-  margin: 0 auto;    
+  margin: 0 auto;
   padding: 3rem 1rem;
-  width: 100%;          
+  width: 100%;
 }
 
 /* 2. The Main Card */
@@ -422,7 +422,7 @@ nav {
 
 .grid-box:hover {
   transform: translateY(-8px);
-  
+
 }
 
 .second-container {
@@ -453,17 +453,17 @@ nav {
   height: 18rem;
   display: flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   /* Controls how much space the photo takes */
 }
 
 .image-wrapper img {
- 
+
   height: 100%;
   width: 100%;
   object-fit: contain;
- 
-  
+
+
 }
 
 .tag {
@@ -482,7 +482,7 @@ nav {
 /* 4. The Pink Info Section */
 .product-info {
   background-color: #fce4ec;
-  
+
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -546,6 +546,197 @@ nav {
   /* Darkens slightly on hover */
 }
 
+/* Module for Product Cards */
+/* 1. Modal Overlay (Nakatago by default) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  /* Itim na background */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  /* Blur effect sa likod */
+}
+
+/* 2. TRIGGER: Lalabas lang ang modal kapag ang ID ay nasa URL (#product1) */
+.modal-overlay:target {
+  display: flex;
+  outline: none;
+}
+
+/* 3. Main Information Card */
+.modal-card {
+  background: #fff;
+  width: 90%;
+  max-width: 850px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10001;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalPop 0.3s ease-out;
+  position: relative;
+  width: 90%;
+  max-width: 850px;
+  background: white;
+  margin: auto;
+  /* Gitna */
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 4. Left Image Side */
+.modal-img {
+  flex: 1;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+
+.modal-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 5. Right Details Side */
+.modal-details {
+  flex: 1.2;
+  padding: 30px 40px;
+  text-align: left;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.m-title {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.m-price {
+  color: #e91e63;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 5px 0;
+}
+
+.m-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.m-info-group {
+  margin-bottom: 12px;
+}
+
+.m-info-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.m-info-group p {
+  color: #777;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.m-chips span {
+  display: inline-block;
+  padding: 6px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.m-stock {
+  color: #2e7d32 !important;
+  font-weight: bold;
+}
+
+.m-list {
+  padding-left: 18px;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* 6. Add to Cart Button */
+.m-btn {
+  width: 100%;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* 7. Close (X) & Outside Closer */
+.close-x {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 35px;
+  text-decoration: none;
+  color: #000;
+  z-index: 10;
+}
+
+.modal-closer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+
+/* Mobile responsive setup */
+@media (max-width: 700px) {
+  .modal-flex {
+    flex-direction: column;
+  }
+
+  .modal-img {
+    height: 250px;
+  }
+}
+
+
+
+
+
 /* End of Products Section */
 
 /* Review Section */
@@ -558,8 +749,10 @@ nav {
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  box-sizing: border-box; /* ← fix */
-  width: 100%;            /* ← fix */
+  box-sizing: border-box;
+  /* ← fix */
+  width: 100%;
+  /* ← fix */
 }
 
 .reviews-section {
@@ -576,7 +769,8 @@ nav {
 }
 
 .reviews-header h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem); /* ← responsive */
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  /* ← responsive */
   font-weight: 800;
   margin: 0;
 }
@@ -597,7 +791,8 @@ nav {
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: center;
-  box-sizing: border-box; /* ← fix */
+  box-sizing: border-box;
+  /* ← fix */
 }
 
 .left-score {
@@ -606,7 +801,8 @@ nav {
 }
 
 .big-score {
-  font-size: clamp(2.5rem, 8vw, 4rem); /* ← responsive */
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  /* ← responsive */
   font-weight: 900;
   margin: 0;
 }
@@ -646,7 +842,8 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  box-sizing: border-box; /* ← fix */
+  box-sizing: border-box;
+  /* ← fix */
 }
 
 .review-card {
@@ -656,8 +853,10 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box; /* ← fix */
-  min-width: 0;           /* ← fix: prevents card overflow */
+  box-sizing: border-box;
+  /* ← fix */
+  min-width: 0;
+  /* ← fix: prevents card overflow */
 }
 
 .stars {
@@ -699,7 +898,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 4px;
-  white-space: nowrap; /* ← fix: prevents wrapping */
+  white-space: nowrap;
+  /* ← fix: prevents wrapping */
 }
 
 /* Footer Button */
@@ -770,7 +970,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   min-width: 0;
-   max-width: 100%; 
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -803,7 +1003,7 @@ nav {
   margin-top: 5rem;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 5rem; 
+  margin-top: 5rem;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -933,7 +1133,7 @@ nav {
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .check-content,
@@ -1173,18 +1373,18 @@ nav {
 @media (max-width: 480px) {
 
   .main-image img {
-   margin: 0 auto;
+    margin: 0 auto;
   }
 
   .second-cntainer p {
-   font-size: 0.5rem; 
+    font-size: 0.5rem;
   }
 
- .reviews-grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- }
+  .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .vmgo-container {
     display: flex;
@@ -1202,18 +1402,18 @@ nav {
 @media (max-width: 768px) {
 
   .main-image img {
-   margin: 0 auto;
+    margin: 0 auto;
   }
 
- .second-container p {
-   font-size: 0.5rem; 
+  .second-container p {
+    font-size: 0.5rem;
   }
 
- .reviews-grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- }
+  .reviews-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .vmgo-container {
     display: flex;
@@ -1225,4 +1425,3 @@ nav {
     margin: 0 auto;
   }
 }
-

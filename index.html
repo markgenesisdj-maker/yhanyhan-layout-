@@ -134,98 +134,356 @@
 
   <div class="grid-container">
     <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="The Daisy Blue Stripe.png" alt="Dress">
-        <span class="tag">Dresses</span>
-      </div>
-      <div class="product-info">
-        <h3 class="title">The Daisy Blue Stripe</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱349</p>
-          <button class="cart-btn">Add to Cart</button>
+      <a href="#product1" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="The Daisy Blue Stripe.png" alt="Dress">
+          <span class="tag">Dresses</span>
         </div>
-      </div>
+        <div class="product-info">
+          <h3 class="title">The Daisy Blue Stripe</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱349</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="The Earthy Smocked Dress.png" alt="Dress">
-        <span class="tag">Dresses</span>
-      </div>
-      <div class="product-info">
-        <h3 class="title">The Earthy Smocked Dress</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱399</p>
-          <button class="cart-btn">Add to Cart</button>
+    <!-- Modal for Product 1 -->
+    <div id="product1" class="modal-overlay">
+      <div class="modal-card">
+        <a href="#products" class="close-x">&times;</a>
+
+        <div class="modal-flex">
+          <div class="modal-img">
+            <img src="The Daisy Blue Stripe.png" alt="Dress">
+          </div>
+
+          <div class="modal-details">
+            <h2 class="m-title">The Daisy Blue Stripe</h2>
+            <p class="m-price">₱349</p>
+            <hr class="m-divider">
+
+            <div class="m-info-group">
+              <label>Description</label>
+              <p>Blue striped sundress with daisy details.</p>
+            </div>
+
+            <div class="m-info-group">
+              <label>Fabric/Material</label>
+              <p>Cotton Linen Blend</p>
+            </div>
+
+            <div class="m-info-group">
+              <label>Available Sizes</label>
+              <div class="m-chips">
+                <span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span>
+              </div>
+            </div>
+
+            <div class="m-info-group">
+              <label>Available Colors</label>
+              <div class="m-chips"><span>Blue</span></div>
+            </div>
+
+            <div class="m-info-group">
+              <label>Availability</label>
+              <p class="m-stock">In Stock - 20 pieces available</p>
+            </div>
+
+            <div class="m-info-group">
+              <label>Care Instructions</label>
+              <ul class="m-list">
+                <li>Machine wash cold</li>
+                <li>Hang dry</li>
+                <li>Do not bleach</li>
+                <li>Iron low</li>
+              </ul>
+            </div>
+
+            <button class="m-btn">🛒 Add to Cart</button>
+          </div>
         </div>
+
       </div>
+      <a href="#products" class="modal-closer"></a>
     </div>
+    <!-- End of Modal for Product 1 -->
 
     <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="The Tropical Two-Piece.png" alt="Dress">
-        <span class="tag">Dresses</span>
-      </div>
-      <div class="product-info">
-        <h3 class="title">The Tropical Two-Piece</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱449</p>
-          <button class="cart-btn">Add to Cart</button>
+      <a href="#product2" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="The Earthy Smocked Dress.png" alt="Dress">
+          <span class="tag">Dresses</span>
         </div>
-      </div>
+        <div class="product-info">
+          <h3 class="title">The Earthy Smocked Dress</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱399</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="Berry Sweet Bow Sundress.png" alt="Dress">
-        <span class="tag">Dresses</span>
-      </div>
-      <div class="product-info">
-        <h3 class="title">Berry Sweet Bow Sundress</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱329</p>
-          <button class="cart-btn">Add to Cart</button>
+    <!-- Modal for Product 2 -->
+    <div id="product2" class="modal-overlay">
+      <div class="modal-card">
+        <a href="#products" class="close-x">&times;</a>
+        <div class="modal-flex">
+          <div class="modal-img"><img src="The Earthy Smocked Dress.png" alt="Dress"></div>
+          <div class="modal-details">
+            <h2 class="m-title">The Earthy Smocked Dress</h2>
+            <p class="m-price">₱399</p>
+            <hr class="m-divider">
+            <div class="m-info-group"><label>Description</label>
+              <p>Boho-style smocked dress in warm earthy tones.</p>
+            </div>
+            <div class="m-info-group"><label>Fabric/Material</label>
+              <p>Premium Challis</p>
+            </div>
+            <div class="m-info-group"><label>Available Sizes</label>
+              <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div>
+            </div>
+            <div class="m-info-group"><label>Available Colors</label>
+              <div class="m-chips"><span>Terracotta</span> <span>Sage</span></div>
+            </div>
+            <div class="m-info-group"><label>Availability</label>
+              <p class="m-stock">In Stock - 15 pieces available</p>
+            </div>
+            <div class="m-info-group"><label>Care Instructions</label>
+              <ul class="m-list">
+                <li>Hand wash recommended</li>
+                <li>Do not wring</li>
+                <li>Dry in shade</li>
+                <li>Iron low</li>
+              </ul>
+            </div>
+            <button class="m-btn">🛒 Add to Cart</button>
+          </div>
         </div>
       </div>
+      <a href="#products" class="modal-closer"></a>
     </div>
+    <!-- End of Modal for Product 2 -->
 
     <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="Lilac Love Flutter Dress.png" alt="Dress">
-        <span class="tag">Dresses</span>
-      </div>
-      <div class="product-info">
-        <h3 class="title">Lilac Love Flutter Dress</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱379</p>
-          <button class="cart-btn">Add to Cart</button>
+      <a href="#product3" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="The Tropical Two-Piece.png" alt="Dress">
+          <span class="tag">Dresses</span>
         </div>
-      </div>
+        <div class="product-info">
+          <h3 class="title">The Tropical Two-Piece</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱449</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <div class="grid-box">
-      <div class="image-wrapper">
-        <img src="The Golden Marigold Dress.png" alt="Dress">
-        <span class="tag">Dresses</span>
+    <!-- Modal for Product 3 -->
+    <div id="product3" class="modal-overlay">
+      <div class="modal-card">
+        <a href="#products" class="close-x">&times;</a>
+        <div class="modal-flex">
+          <div class="modal-img"><img src="The Tropical Two-Piece.png" alt="Dress"></div>
+          <div class="modal-details">
+            <h2 class="m-title">The Tropical Two-Piece</h2>
+            <p class="m-price">₱449</p>
+            <hr class="m-divider">
+            <div class="m-info-group"><label>Description</label>
+              <p>Summer-ready two-piece terno with tropical floral prints.</p>
+            </div>
+            <div class="m-info-group"><label>Fabric/Material</label>
+              <p>Soft Rayon</p>
+            </div>
+            <div class="m-info-group"><label>Available Sizes</label>
+              <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div>
+            </div>
+            <div class="m-info-group"><label>Available Colors</label>
+              <div class="m-chips"><span>Pink Tropical</span> <span>Green Leaf</span></div>
+            </div>
+            <div class="m-info-group"><label>Availability</label>
+              <p class="m-stock">In Stock - 10 pieces available</p>
+            </div>
+            <div class="m-info-group"><label>Care Instructions</label>
+              <ul class="m-list">
+                <li>Machine wash cold</li>
+                <li>Low tumble dry</li>
+                <li>Iron medium heat</li>
+              </ul>
+            </div>
+            <button class="m-btn">🛒 Add to Cart</button>
+          </div>
+        </div>
       </div>
-      <div class="product-info">
-        <h3 class="title">The Golden Marigold Dress</h3>
-        <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
-        <div class="price-action-row">
-          <p class="price">₱369</p>
-          <button class="cart-btn">Add to Cart</button>
+      <a href="#products" class="modal-closer"></a>
+    </div>
+    <!-- End of Modal for Product 3 -->
+
+    <div class="grid-box">
+      <a href="#product4" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="Berry Sweet Bow Sundress.png" alt="Dress">
+          <span class="tag">Dresses</span>
+        </div>
+        <div class="product-info">
+          <h3 class="title">Berry Sweet Bow Sundress</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱329</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Modal for Product 4 -->
+    <div id="product4" class="modal-overlay">
+      <div class="modal-card">
+        <a href="#products" class="close-x">&times;</a>
+        <div class="modal-flex">
+          <div class="modal-img"><img src="Berry Sweet Bow Sundress.png" alt="Dress"></div>
+          <div class="modal-details">
+            <h2 class="m-title">Berry Sweet Bow Sundress</h2>
+            <p class="m-price">₱329</p>
+            <hr class="m-divider">
+            <div class="m-info-group"><label>Description</label>
+              <p>Adorable sundress featuring a berry print and a large back bow.</p>
+            </div>
+            <div class="m-info-group"><label>Fabric/Material</label>
+              <p>100% Cotton</p>
+            </div>
+            <div class="m-info-group"><label>Available Sizes</label>
+              <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span></div>
+            </div>
+            <div class="m-info-group"><label>Available Colors</label>
+              <div class="m-chips"><span>Strawberry Red</span></div>
+            </div>
+            <div class="m-info-group"><label>Availability</label>
+              <p class="m-stock">In Stock - 25 pieces available</p>
+            </div>
+            <div class="m-info-group"><label>Care Instructions</label>
+              <ul class="m-list">
+                <li>Machine wash warm</li>
+                <li>Do not bleach</li>
+                <li>Iron low</li>
+              </ul>
+            </div>
+            <button class="m-btn">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <a href="#products" class="modal-closer"></a>
+    </div>
+    <!-- End of Modal 4-->
+
+    <div class="grid-box">
+      <a href="#product5" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="Lilac Love Flutter Dress.png" alt="Dress">
+          <span class="tag">Dresses</span>
+        </div>
+        <div class="product-info">
+          <h3 class="title">Lilac Love Flutter Dress</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱379</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Modal for Product 5 -->
+    <div id="product5" class="modal-overlay">
+      <div class="modal-card">
+        <a href="#products" class="close-x">&times;</a>
+        <div class="modal-flex">
+          <div class="modal-img"><img src="Lilac Love Flutter Dress.png" alt="Dress"></div>
+          <div class="modal-details">
+            <h2 class="m-title">Lilac Love Flutter Dress</h2>
+            <p class="m-price">₱379</p>
+            <hr class="m-divider">
+            <div class="m-info-group"><label>Description</label>
+              <p>Sweet lilac dress with elegant flutter sleeves for special occasions.</p>
+            </div>
+            <div class="m-info-group"><label>Fabric/Material</label>
+              <p>Textured Georgette</p>
+            </div>
+            <div class="m-info-group"><label>Available Sizes</label>
+              <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div>
+            </div>
+            <div class="m-info-group"><label>Available Colors</label>
+              <div class="m-chips"><span>Lilac</span> <span>White</span></div>
+            </div>
+            <div class="m-info-group"><label>Availability</label>
+              <p class="m-stock">In Stock - 12 pieces available</p>
+            </div>
+            <div class="m-info-group"><label>Care Instructions</label>
+              <ul class="m-list">
+                <li>Gentle machine wash</li>
+                <li>Hang to dry</li>
+                <li>Low steam iron</li>
+              </ul>
+            </div>
+            <button class="m-btn">🛒 Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <a href="#products" class="modal-closer"></a>
+    </div>
+    <!-- End of Modal 5-->
+
+    <div class="grid-box">
+      <a href="#product6" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <div class="image-wrapper">
+          <img src="The Golden Marigold Dress.png" alt="Dress">
+          <span class="tag">Dresses</span>
+        </div>
+        <div class="product-info">
+          <h3 class="title">The Golden Marigold Dress</h3>
+          <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+          <div class="price-action-row">
+            <p class="price">₱369</p>
+            <span class="cart-btn">View Details</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Modal for Product 6 -->
+    <div id="product5" class="modal-overlay">
+    <div class="modal-card">
+      <a href="#products" class="close-x">&times;</a>
+      <div class="modal-flex">
+        <div class="modal-img"><img src="Lilac Love Flutter Dress.png" alt="Dress"></div>
+        <div class="modal-details">
+          <h2 class="m-title">Lilac Love Flutter Dress</h2>
+          <p class="m-price">₱379</p>
+          <hr class="m-divider">
+          <div class="m-info-group"><label>Description</label><p>Sweet lilac dress with elegant flutter sleeves for special occasions.</p></div>
+          <div class="m-info-group"><label>Fabric/Material</label><p>Textured Georgette</p></div>
+          <div class="m-info-group"><label>Available Sizes</label><div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div></div>
+          <div class="m-info-group"><label>Available Colors</label><div class="m-chips"><span>Lilac</span> <span>White</span></div></div>
+          <div class="m-info-group"><label>Availability</label><p class="m-stock">In Stock - 12 pieces available</p></div>
+          <div class="m-info-group"><label>Care Instructions</label><ul class="m-list"><li>Gentle machine wash</li><li>Hang to dry</li><li>Low steam iron</li></ul></div>
+          <button class="m-btn">🛒 Add to Cart</button>
         </div>
       </div>
     </div>
+    <a href="#products" class="modal-closer"></a>
+  </div>
+    <!-- End of Modal 6-->
+
   </div>
 
   <!-- End of Products Section -->
-   
   <!-- Reviews Section -->
   <div class="reviews-wrapper">
     <section class="reviews-section">
@@ -492,8 +750,8 @@
         children.</p>
 
       <div class="main-buttons">
-        <button class="btn-Call">  Call Us Now  </button>
-        <button class="btn-WhatsApp"> Message on WhatsApp  </button>
+        <button class="btn-Call"> Call Us Now </button>
+        <button class="btn-WhatsApp"> Message on WhatsApp </button>
         <button class="btn-Email"> Email Us</button>
       </div>
 
@@ -503,49 +761,50 @@
   <!-- END OF CTA ACTION SECTION -->
 
   <!-- START OF FOOTER SECTION --> <!--DONE MARK-->
-<footer class="footer">
+  <footer class="footer">
     <div class="main-container1">
       <div class="sub-container1">
         <div class="footer-logo">
-            <img src="" alt="Logo">
-            <h4>Yhanyhan's RTW Shop</h4>
+          <img src="" alt="Logo">
+          <h4>Yhanyhan's RTW Shop</h4>
         </div>
-        <p class="description">Original RTW dresses & ternos for girls aged 5-10, proudly from Taytay Tiangge, Rizal.</p>
+        <p class="description">Original RTW dresses & ternos for girls aged 5-10, proudly from Taytay Tiangge, Rizal.
+        </p>
       </div>
 
       <div class="sub-container2">
         <h4>Quick Links</h4>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
         </ul>
       </div>
 
       <div class="sub-container3">
         <h4>Categories</h4>
         <ul>
-            <li><a href="#">Dresses</a></li>
-            <li><a href="#">Ternos</a></li>
-            <li><a href="#">Casual Wear</a></li>
-            <li><a href="#">Special Occassion</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Ternos</a></li>
+          <li><a href="#">Casual Wear</a></li>
+          <li><a href="#">Special Occassion</a></li>
         </ul>
       </div>
 
       <div class="sub-container4">
         <h4>Contact Us</h4>
         <div class="contact-item">
-            <i class="fas fa-phone-alt"></i>
-            <span>+63 123 456 7890</span>
+          <i class="fas fa-phone-alt"></i>
+          <span>+63 123 456 7890</span>
         </div>
         <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>yhanyhan@shop.com</span>
+          <i class="fas fa-envelope"></i>
+          <span>yhanyhan@shop.com</span>
         </div>
         <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Taytay Tiangge, Taytay, Rizal</span>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Taytay Tiangge, Taytay, Rizal</span>
         </div>
       </div>
     </div>
