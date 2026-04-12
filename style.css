@@ -184,6 +184,7 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
+  padding-top: 2rem;
 }
 
 .main-product {
@@ -256,6 +257,12 @@ nav {
   font-weight: bold;
   cursor: pointer;
   margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+
+.btn-Shop:hover {
+  transform: scale(0.95);
 }
 
 .btn-View {
@@ -265,6 +272,11 @@ nav {
   padding: 12px 25px;
   border-radius: 25px;
   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.btn-View:hover {
+  transform: scale(0.95);
 }
 
 .main-image {
@@ -284,13 +296,15 @@ nav {
   bottom: 20px;
   left: 40px;
   background: #FFC107;
-  padding: 10px 20px;
+  padding: 30px 30px;
   border-radius: 10px;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 #Discount {
   font-weight: 100;
+  font-size:1.5rem;
 }
 
 /* END OF HOMEPAGE SECTION */
@@ -305,7 +319,7 @@ nav {
 }
 
 .deal-section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   font-family: 'Arial', sans-serif;
 }
 
@@ -324,12 +338,20 @@ nav {
 }
 
 .deals-text {
-  color: gray;
+  
   margin-bottom: 20px;
   font-size: 1rem;
   text-align: center;
 }
 
+.deals-text h2 {
+  color: black;
+}
+
+.deals-text p {
+  color: gray;
+  line-height: 1.7;
+}
 .deals-header h2 {
   font-size: 2.5rem;
   margin-top: 15px;
@@ -451,6 +473,7 @@ nav {
   margin: 0 auto;
   padding: 3rem 1rem;
   width: 100%;
+  background: linear-gradient(to right, #ffffff, #fff5f7);
 }
 
 .grid-box {
@@ -844,7 +867,7 @@ nav {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 100%;
   box-sizing: border-box;
@@ -1396,6 +1419,16 @@ nav {
 
   .second-cntainer p {
     font-size: 0.5rem;
+  
+  }
+
+  .modal-card {
+    width: 100%; /* Full width on tiny screens */
+    height: auto;
+    max-height: 90vh; /* Prevents it from going off-screen */
+    border-radius: 15px 15px 0 0; /* Optional: Rounded top only for a "sheet" look */
+    margin-bottom: 0; /* Stick to bottom if desired */
+    overflow-y: auto; /* Allow scrolling if content is long */
   }
 
   .reviews-grid {
@@ -1417,6 +1450,16 @@ nav {
 
 /* TABLET */
 @media (max-width: 768px) {
+
+
+.promo-tag {
+  
+  left: 0.1rem;
+
+}
+
+
+
 
   .main-image img {
     margin: 0 auto;
@@ -1441,4 +1484,12 @@ nav {
   .right-content {
     margin: 0 auto;
   }
+
+.footer {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
 }
+
+}
+ 
