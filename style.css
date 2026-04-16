@@ -39,7 +39,7 @@ nav {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
   
   /* Changed to nowrap to force everything on one line */
-  flex-wrap: nowrap; 
+ 
 }
 
 .logo {
@@ -137,11 +137,14 @@ nav {
 }
 
 /* Mobile Fix: Keeps it clean when screen is very narrow */
-@media(max-width:768px) {
+@media(max-width: 915px) {
+
+ 
   nav {
     flex-wrap: wrap; /* Allow wrapping only on mobile */
     justify-content: center;
     gap: 10px;
+ 
   }
 
   .nav-links {
@@ -151,9 +154,16 @@ nav {
     padding: 10px 0;
   }
 
+
+
+  
+  
+  
   .logo h2 {
     font-size: 16px;
   }
+
+ 
 }
 
 /* End of Navigation */
@@ -809,6 +819,7 @@ nav {
   margin-bottom: 3rem;
   align-items: center;
   box-sizing: border-box;
+ 
 }
 
 .left-score {
@@ -942,6 +953,7 @@ nav {
 /* VMGO SECTION */
 .aboutus-container {
   background: linear-gradient(to right, #ffffff, #fff5f7);
+
 }
 
 .vmgo-container {
@@ -1414,11 +1426,25 @@ nav {
     
   }
 
+  
+
   .reviews-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
+  .stats-summary-box {
+
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+   .right-bars {
+    width: 100%;
+   }
+
 
   
   .vmgo-container {
@@ -1436,7 +1462,7 @@ nav {
 }
 
 /* TABLET */
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
 
   .promo-tag {
@@ -1467,6 +1493,7 @@ nav {
     justify-content: center;
   }
 
+   
   .aboutus-container {
     display: flex;
     flex-direction: column;
