@@ -187,7 +187,8 @@ nav {
 
 .homepage-section {
   padding: 0px 10%;
-  background: linear-gradient(to right, #ffffff, #fff5f7);
+  position: relative;
+  height: calc(100vh - 80px);
 }
 
 .main-container {
@@ -198,6 +199,9 @@ nav {
 
 .main-product {
   flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .badge {
@@ -212,11 +216,12 @@ nav {
   font-size: 3rem;
   margin: 20px 0;
   line-height: 1.2;
+  color: white;
 }
 
 .main-product p {
   margin-bottom: 30px;
-  color: #666;
+  color: #e0e0e0;
   max-width: 450px;
   font-size: 22px;
 }
@@ -239,8 +244,8 @@ nav {
 
 .btn-View {
   background: transparent;
-  border: 1px solid #E91E63;
-  color: #E91E63;
+  border: 1px solid #fff;
+  color: #fff;
   padding: 12px 25px;
   border-radius: 25px;
   cursor: pointer;
@@ -332,6 +337,102 @@ nav {
   font-weight: bold;
   font-size: 1.5rem;
 
+}
+
+/* Carousel Styles */
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.carousel-slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 25%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-nav label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-nav label:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Radio button controls */
+#slide1:checked ~ .carousel-slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-slides {
+  transform: translateX(-25%);
+}
+
+#slide3:checked ~ .carousel-slides {
+  transform: translateX(-50%);
+}
+
+#slide4:checked ~ .carousel-slides {
+  transform: translateX(-75%);
+}
+
+#slide1:checked ~ .carousel-nav label[for="slide1"],
+#slide2:checked ~ .carousel-nav label[for="slide2"],
+#slide3:checked ~ .carousel-nav label[for="slide3"],
+#slide4:checked ~ .carousel-nav label[for="slide4"] {
+  background: white;
 }
 
 /* END OF HOMEPAGE SECTION */

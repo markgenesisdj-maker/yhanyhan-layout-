@@ -64,6 +64,48 @@
       </div>
 
     </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+      <div class="carousel-container">
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+        <input type="radio" name="carousel" id="slide4">
+
+        <div class="carousel-slides">
+          <div class="slide">
+            <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="Dress 1">
+          </div>
+          <div class="slide">
+            <img src="CSS/ASSETS/Dandelion Dance Ruffle.png" alt="Dress 2">
+          </div>
+          <div class="slide">
+            <img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" alt="Dress 3">
+          </div>
+          <div class="slide">
+            <img src="CSS/ASSETS/The Daisy Blue Stripe.png" alt="Dress 4">
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let current = 1;
+      setInterval(() => {
+        document.getElementById('slide' + current).checked = false;
+        current = current % 4 + 1;
+        document.getElementById('slide' + current).checked = true;
+      }, 3000);
+    </script>
+
   </div>
   <!-- End of the Home Page Section -->
 
