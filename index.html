@@ -21,6 +21,13 @@
       <h2>YHANYHAN'S RTW SHOP</h2>
     </div>
 
+    <input type="checkbox" id="nav-toggle">
+<label for="nav-toggle" class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#deals">Deals</a></li>
@@ -56,12 +63,23 @@
         </div>
       </div>
 
-      <div class="main-image">
-        <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="Featured Dress">
-        <div class="promo-tag">Up to <br>
-          <div id="Discount">50% Off</div>
-        </div>
-      </div>
+   <div class="main-image">
+  <input type="radio" name="hero" id="h1" checked>
+  <input type="radio" name="hero" id="h2">
+  <input type="radio" name="hero" id="h3">
+
+  <!-- ADD THIS WRAPPER -->
+  <div class="carousel-wrapper">
+  <div class="hero-slides">
+    <div class="hero-slide"><img src="CSS/ASSETS/The Pink Bow Strap.png" alt="Featured Dress 1"></div>
+    <div class="hero-slide"><img src="CSS/ASSETS/Dandelion Dance Ruffle.png" alt="Featured Dress 2"></div>
+    <div class="hero-slide"><img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" alt="Featured Dress 3"></div>
+  </div>
+</div>
+
+  <div class="promo-tag">Up to <br><div id="Discount">50% Off</div></div>
+  
+</div>
 
     </div>
   </div>
@@ -327,7 +345,7 @@
     <!-- End of Modal for Deal 3 -->
   </div>
 
-  </div>
+ 
   <!-- End of the Deal Section -->
 
 
@@ -1018,7 +1036,7 @@
         </a>
       </div>
 
-      < <!-- Modal for Product 12 -->
+       <!-- Modal for Product 12 -->
         <div id="product12" class="modal-overlay">
           <div class="modal-card">
             <a href="#0" class="close-x">&times;</a>

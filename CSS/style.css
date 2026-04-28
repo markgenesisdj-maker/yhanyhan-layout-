@@ -16,13 +16,55 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: sans-serif;
-  padding-top: 80px;
+ 
+}
+
+/* Hero Carousel */
+.main-image input[type="radio"] {
+  display: none;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-slides {
+  display: flex;
+  width: 300%;
+  animation: autoSlide 21s infinite;
+}
+
+.hero-slide {
+  width: calc(100% / 3);
+  flex-shrink: 0;
+}
+
+.hero-slide img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 
+
+
+@keyframes autoSlide {
+  0%        { transform: translateX(0%); }
+  28%       { transform: translateX(0%); }        /* hold slide 1 for ~7s */
+  33.33%    { transform: translateX(-33.33%); }   /* transition to slide 2 */
+  61.33%    { transform: translateX(-33.33%); }   /* hold slide 2 for ~7s */
+  66.66%    { transform: translateX(-66.66%); }   /* transition to slide 3 */
+  94.66%    { transform: translateX(-66.66%); }   /* hold slide 3 for ~7s */
+  100%      { transform: translateX(0%); }        /* loop back */
+}
+
+
+/* End of Carousel */
+
 /* Start of Navigation */
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,6 +153,33 @@ nav {
   font-weight: bold;
 }
 
+/* Hamburger Navigation Bar*/
+
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 4px;
+}
+
+
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #E91E63;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 @media(max-width:1024px) {
   nav {
     padding: 10px 2%;
@@ -174,7 +243,9 @@ nav {
   flex: 1;
   min-width: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  position: relative;
+
 }
 
 .home-image {
@@ -251,17 +322,9 @@ nav {
   transform: scale(0.95);
 }
 
-.main-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
 
-.main-image img {
-  border-radius: 20px;
-  width: 80%;
-}
+
+
 
 .promo-tag {
   position: absolute;
@@ -293,6 +356,7 @@ nav {
 .deal-section {
   padding: 120px 20px;
   font-family: sans-serif;
+  
 }
 
 .deals-header {
@@ -352,12 +416,16 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+ 
+ 
 }
 
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-color: pink;
+ 
 }
 
 .image-container {
@@ -367,6 +435,7 @@ nav {
   height: 350px;
   display: flex;
   justify-content: center;
+  
 }
 
 .image-container img {
@@ -1499,9 +1568,73 @@ nav {
 }
 
 @media (max-width: 768px) {
+
+ body {
+  overflow-x : hidden;
+ }
+
+ 
+  .hero-dots {
+    bottom: 10px;
+    right: 10px;
+  }
+
   .main-container1 {
     grid-template-columns: 1fr 1fr;
   }
+
+.hamburger {
+    display: flex;
+  }
+
+  /* Collapse the nav-links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #FFECEE;
+    padding: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    gap: 18px;
+    z-index: 1000;
+   
+  }
+
+  /* Reveal nav-links when checkbox is checked */
+  #nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Animate hamburger → X when open */
+  #nav-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #nav-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #nav-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Keep nav tidy: logo on left, hamburger on right */
+  nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: sticky;
+  }
+
+  /* Hide search bar on small screens to avoid clutter */
+  .search-box {
+    display: none;
+  }
+
+
 }
 
 @media (max-width: 480px) {
@@ -1518,14 +1651,9 @@ nav {
   width: 100%;
 }
 
-/* MOBILE */
+
+
 @media (max-width: 480px) {
-  .main-image img {
-    margin: 0 auto;
-  }
-
-
-
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -1555,7 +1683,9 @@ nav {
   .right-content {
     margin: 0 auto;
   }
+
 }
+
 
 /* TABLET */
 @media (max-width: 830px) {
@@ -1565,9 +1695,7 @@ nav {
     left: 0.1rem;
   }
 
-  .main-image img {
-    margin: 0 auto;
-  }
+
 
   .grid-container {
     margin: 0 auto;
