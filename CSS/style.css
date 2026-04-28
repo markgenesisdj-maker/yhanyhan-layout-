@@ -42,7 +42,8 @@ body {
 }
 
 .hero-slide img {
-  width: 100%;
+   width: 85%;
+   height: 65vh;
   border-radius: 20px;
 }
 
@@ -329,7 +330,7 @@ nav {
 .promo-tag {
   position: absolute;
   bottom: 20px;
-  left: 40px;
+  left: 1rem;
   background: #FFC107;
   padding: 10px 20px;
   border-radius: 10px;
@@ -1573,7 +1574,12 @@ nav {
   overflow-x : hidden;
  }
 
- 
+ .hero-slides img {
+    width: 80%;
+     height: 65vh;
+     
+    
+  }
   .hero-dots {
     bottom: 10px;
     right: 10px;
@@ -1641,6 +1647,13 @@ nav {
   .main-container1 {
     grid-template-columns: 1fr;
   }
+
+
+  .hero-slides img {
+    width: 100%;
+   border-radius: 20px;
+ }
+
 }
 
 /* END OF FOOTER SECTION */
