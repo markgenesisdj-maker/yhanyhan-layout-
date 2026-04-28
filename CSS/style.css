@@ -1695,8 +1695,9 @@ nav {
 
 .bot-header small {
   font-size: 11px;
-  background: transparent; /* Changed from #none */
+  background: none;
   opacity: 0.8;
+
 }
 
 /* close */
