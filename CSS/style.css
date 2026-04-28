@@ -884,8 +884,9 @@ nav {
 .feedback {
   font-size: 0.95rem;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.7;
   margin: 1rem 0;
+  text-align: justify;
 }
 
 .customer-info-row {
@@ -943,7 +944,7 @@ nav {
   box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
 }
 
-/* Review Section End */
+/* End of Review Section */
 
 /* VMGO SECTION */
 .aboutus-container {
@@ -962,13 +963,47 @@ nav {
   overflow-x: hidden;
 }
 
+.about-map-section {
+  width: 100%;
+  max-width: 1285px;
+  margin: 4rem auto;
+  padding: 0 20px;
+}
+
+.about-map-section h2 {
+  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.about-map-wrapper {
+  border: 2px solid rgba(226, 123, 168, 0.35);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-map-wrapper iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .about-map-wrapper iframe {
+    min-height: 320px;
+  }
+}
+
 .history-container {
   flex: 1.5;
-  text-align: left;
+  text-align: justify;
   margin: 0;
   width: 100%;
   max-width: 100%;
   margin-bottom: 2rem;
+
 }
 
 .history-container h1 {
@@ -1048,7 +1083,7 @@ nav {
 
 .vision-card img {
   width: 2rem;
-  height: 2rem;
+  height: 1.5rem;
   object-fit: contain;
 }
 
@@ -1067,7 +1102,15 @@ nav {
 .vision-card img,
 .vision-card h2,
 .vision-card p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.vision-card p,
+.mission-card p,
+.goals-card p,
+.goals-card ul {
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .mission-card {
@@ -1201,84 +1244,159 @@ nav {
 
 /*vgmo section end*/
 
-/* START OF CTA SECTION */
-.cta {
-  padding: 80px 20px;
+/* General Section Styling */
+.cta-section {
+  padding: 60px 0;
   background-color: #FFECEE;
-  width: 100%;
-  text-align: center;
-  color: rgb(66, 66, 66);
-}
-
-.cta .main-container {
-  max-width: 900px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.cta-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cta-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #E92063;
+  /* Pink Brand Color */
+  margin-bottom: 10px;
+}
+
+.cta-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Layout Alignment */
+.contact-wrapper {
+  display: flex;
+    justify-content: center;
+    align-items: stretch; /* Para pantay ang taas ng kaliwa at kanan */
+    max-width: 1000px;
+    width: 90%;
+    gap: 20px; /* Konting espasyo gaya ng nasa image mo */
+}
+
+/* LEFT SIDE - The Form */
+.contact-form-container {
+  flex: 1.2;
+    background-color: #d70cb9; /* Blue-gray color from your image */
+    padding: 40px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form-container h3 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(218, 33, 166, 0.956);
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
-.cta h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
-  color: #E92063;
-}
-
-.cta .cta-description {
-  font-size: 1.3rem;
-  max-width: 700px;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-.cta .main-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 20px 0;
-}
-
-.cta .main-buttons button {
-  padding: 15px 30px;
-  border-radius: 15px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.2s, opacity 0.2s;
+.contact-form-container input,
+.contact-form-container textarea {
+  padding: 12px;
   border: none;
-  color: white;
+  font-size: 14px;
 }
 
-.cta .main-buttons button:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-.btn-Call {
+.btn-submit {
   background-color: #273249;
+  /* Darker blue button */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  /* Centered button like reference */
+  margin-top: 10px;
 }
 
-.btn-WhatsApp {
-  background-color: #43a047;
+/* RIGHT SIDE - Info Boxes */
+.contact-info-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.btn-Email {
-  background-color: #000000;
+.phone-header {
+  text-align: right;
+  font-weight: bold;
+  color: #d35400;
+  /* Dark Orange/Red like reference */
 }
 
-.cta .availability {
-  margin-top: 20px;
-  color: gray;
-  font-size: 1.3rem;
+/* Light Blue Box */
+.schedule-box {
+  background-color: #c00a95;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-/* END OF CTA SECTION */
+.inner-border {
+  border: 2px solid rgba(213, 11, 142, 0.5);
+  padding: 15px;
+}
+
+/* Gray Box */
+.rtw-pricing-box {
+  background-color: #D5D8DC;
+  /* Light gray box */
+  padding: 30px;
+  text-align: center;
+}
+
+.rtw-pricing-box h4 {
+  color: #ce0b86;
+  /* Dark red for clothing pricing */
+  margin-bottom: 15px;
+}
+
+.btn-quote {
+  background-color: #93078c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer Section */
+.cta-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.availability {
+  color: #b8077a;
+  font-style: italic;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .cta-header h2 {
+    font-size: 2rem;
+  }
+}
 
 /* START OF FOOTER SECTION */
 .footer {
@@ -1505,4 +1623,139 @@ nav {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.bot-wrapper {
+  position: relative;
+}
+
+/* floating button */
+.bot-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #4f46e5;
+  color: white;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* modal */
+.bot-modal {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.bot-fab {
+  background-color: #ff4d6d;
+}
+
+/* SHOW ON CLICK */
+#botToggle:checked~.bot-modal {
+  display: flex;
+}
+
+/* header */
+.bot-header {
+  background: #e91e63;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bot-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-icon {
+  font-size: 20px;
+}
+
+.bot-header small {
+  font-size: 11px;
+  background: transparent; /* Changed from #none */
+  opacity: 0.8;
+}
+
+/* close */
+.bot-close {
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+/* body */
+.bot-body {
+  flex: 1;
+  padding: 12px;
+  background: #fff0f6;
+
+}
+
+.bot-message {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* quick buttons */
+.bot-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bot-quick button {
+  padding: 5px 10px;
+  border: 1px solid #e91e63;
+  border-radius: 20px;
+  font-size: 11px;
+  background: white;
+  color: #e91e63;
+}
+
+/* input */
+.bot-input {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0 15px;
+}
+
+.bot-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  background: white;
+}
+
+.bot-input button {
+  color: white;
+  border: none;
+  padding: 0 10px;
 }
