@@ -51,103 +51,19 @@
           unbeatable prices! </p>
 
         <div class="main-buttons">
-          <a href="#products" class="btn-Shop">Shop Now</a>
-          <a href="#deals" class="btn-View">View Deals</a>
+          <button class="btn-Shop">Shop Now</button>
+          <button class="btn-View">View Deals</button>
         </div>
       </div>
 
       <div class="main-image">
-        <div class="product-carousel">
-          <div class="product-carousel-track">
-            <img src="CSS/ASSETS/The Pink Bow Strap.png" class="product-carousel-slide active" alt="Featured Dress 1">
-            <img src="CSS/ASSETS/Dandelion Dance Ruffle.png" class="product-carousel-slide" alt="Featured Dress 2">
-            <img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" class="product-carousel-slide" alt="Featured Dress 3">
-            <img src="CSS/ASSETS/The Daisy Blue Stripe.png" class="product-carousel-slide" alt="Featured Dress 4">
-          </div>
-          <div class="product-carousel-dots">
-            <span class="p-dot active" data-slide="0"></span>
-            <span class="p-dot" data-slide="1"></span>
-            <span class="p-dot" data-slide="2"></span>
-            <span class="p-dot" data-slide="3"></span>
-          </div>
-        </div>
+        <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="Featured Dress">
         <div class="promo-tag">Up to <br>
           <div id="Discount">50% Off</div>
         </div>
       </div>
 
     </div>
-
-    <!-- Carousel Section -->
-    <div class="carousel">
-      <div class="carousel-container">
-        <input type="radio" name="carousel" id="slide1" checked>
-        <input type="radio" name="carousel" id="slide2">
-        <input type="radio" name="carousel" id="slide3">
-        <input type="radio" name="carousel" id="slide4">
-
-        <div class="carousel-slides">
-          <div class="slide">
-            <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="Dress 1">
-          </div>
-          <div class="slide">
-            <img src="CSS/ASSETS/Dandelion Dance Ruffle.png" alt="Dress 2">
-          </div>
-          <div class="slide">
-            <img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" alt="Dress 3">
-          </div>
-          <div class="slide">
-            <img src="CSS/ASSETS/The Daisy Blue Stripe.png" alt="Dress 4">
-          </div>
-        </div>
-
-        <div class="carousel-nav">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-          <label for="slide4"></label>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      let current = 1;
-      setInterval(() => {
-        document.getElementById('slide' + current).checked = false;
-        current = current % 4 + 1;
-        document.getElementById('slide' + current).checked = true;
-      }, 3000);
-
-      // Product Carousel Script
-      (function() {
-        const slides = document.querySelectorAll('.product-carousel-slide');
-        const dots = document.querySelectorAll('.p-dot');
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-          });
-          dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-          });
-        }
-
-        dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
-            currentSlide = index;
-            showSlide(currentSlide);
-          });
-        });
-
-        setInterval(() => {
-          currentSlide = (currentSlide + 1) % totalSlides;
-          showSlide(currentSlide);
-        }, 3500);
-      })();
-    </script>
-
   </div>
   <!-- End of the Home Page Section -->
 
@@ -160,79 +76,76 @@
 
     <div class="deals-text">
       <h2>Limited Time Offers</h2>
-      <p><center>Don't miss out on our special deals!</center><br>
+      <p>Don't miss out on our special deals! <br>
         Premium quality kids' dresses and ternos at incredible prices. </p>
     </div>
 
     <div class="deal-main-container">
       <div class="card">
-        <a href="#deal1" style="text-decoration: none; color: inherit;">
-          <div class="image-container">
-            <span class="discount-badge">50% OFF</span>
+        <div class="image-container">
+          <span class="discount-badge">50% OFF</span>
 
-            <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="The Pink Bow Strap">
+          <img src="CSS/ASSETS/The Pink Bow Strap.png" alt="The Pink Bow Strap">
+        </div>
+
+        <div class="card-content">
+          <h3>Sofi Dress</h3>
+
+          <div class="price-row">
+            <span class="current-price">₱30</span>
+            <span class="old-price">₱60</span>
           </div>
 
-          <div class="card-content">
-            <h3>Sofi Dress</h3>
-
-            <div class="price-row">
-              <span class="current-price">₱30</span>
-              <span class="old-price">₱60</span>
-            </div>
-
-            <p class="timer"> 2 days left</p>
-            <button class="grab-btn" type="button">GRAB DEAL NOW</button>
-          </div>
-        </a>
+          <p class="timer"> 2 days left</p>
+          <button class="grab-btn">GRAB DEAL NOW</button>
+        </div>
       </div>
 
       <div class="card">
-        <a href="#deal2" style="text-decoration: none; color: inherit;">
-          <div class="image-container">
-            <span class="discount-badge">20% OFF</span>
+        <div class="image-container">
+          <span class="discount-badge">20% OFF</span>
 
-            <img src="CSS/ASSETS/Dandelion Dance Ruffle.png" alt="Dandelion Dance Ruffle">
+          <img src="CSS/ASSETS/Dandelion Dance Ruffle.png" alt="Dandelion Dance Ruffle">
+        </div>
+
+        <div class="card-content">
+          <h3>Angelic Dress</h3>
+
+          <div class="price-row">
+            <span class="current-price">₱64</span>
+            <span class="old-price">₱80</span>
           </div>
 
-          <div class="card-content">
-            <h3>Angelic Dress</h3>
-
-            <div class="price-row">
-              <span class="current-price">₱64</span>
-              <span class="old-price">₱80</span>
-            </div>
-
-            <p class="timer"> 5 days left</p>
-            <button class="grab-btn" type="button">GRAB DEAL NOW</button>
-          </div>
-        </a>
+          <p class="timer"> 5 days left</p>
+          <button class="grab-btn">GRAB DEAL NOW</button>
+        </div>
       </div>
 
       <div class="card">
-        <a href="#deal3" style="text-decoration: none; color: inherit;">
-          <div class="image-container">
-            <span class="discount-badge">24% OFF</span>
+        <div class="image-container">
+          <span class="discount-badge">24% OFF</span>
 
-            <img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" alt="The Blue Floral Seersucker">
+          <img src="CSS/ASSETS/The Blue Floral Seersucker Dress.png" alt="The Blue Floral Seersucker">
+        </div>
+
+        <div class="card-content">
+          <h3>Sanrio Dress</h3>
+
+          <div class="price-row">
+            <span class="current-price">₱74</span>
+            <span class="old-price">₱100</span>
           </div>
 
-          <div class="card-content">
-            <h3>Sanrio Dress</h3>
-
-            <div class="price-row">
-              <span class="current-price">₱74</span>
-              <span class="old-price">₱100</span>
-            </div>
-
-            <p class="timer">1 week left</p>
-            <button class="grab-btn" type="button">GRAB DEAL NOW</button>
-          </div>
-        </a>
+          <p class="timer">1 week left</p>
+          <button class="grab-btn">GRAB DEAL NOW</button>
+        </div>
       </div>
+
 
     </div>
 
+
+    <!-- Start for Modal of Deal 1-->
     <!-- Modal for Deal 1 -->
     <div id="deal1" class="modal-overlay">
       <div class="modal-card">
@@ -246,12 +159,15 @@
           <div class="modal-details">
             <h2 class="m-title">Sofi Dress</h2>
             <div class="deal-discount-badge">50% OFF</div>
-            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱60</span> <span style="color: #E91E63; font-weight: bold;">₱30</span></p>
+            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱60</span>
+              <span style="color: #E91E63; font-weight: bold;">₱30</span>
+            </p>
             <hr class="m-divider">
 
             <div class="m-info-group">
               <label>Description</label>
-              <p>A trendy and comfortable dress featuring the iconic pink bow strap detail. Perfect for special occasions and everyday wear.</p>
+              <p>A trendy and comfortable dress featuring the iconic pink bow strap detail. Perfect for special
+                occasions and everyday wear.</p>
             </div>
 
             <div class="m-info-group">
@@ -303,12 +219,15 @@
           <div class="modal-details">
             <h2 class="m-title">Angelic Dress</h2>
             <div class="deal-discount-badge">20% OFF</div>
-            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱80</span> <span style="color: #E91E63; font-weight: bold;">₱64</span></p>
+            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱80</span>
+              <span style="color: #E91E63; font-weight: bold;">₱64</span>
+            </p>
             <hr class="m-divider">
 
             <div class="m-info-group">
               <label>Description</label>
-              <p>Adorable dandelion-inspired design with delicate ruffles. A perfect pick for girls who love nature-themed fashion and comfort.</p>
+              <p>Adorable dandelion-inspired design with delicate ruffles. A perfect pick for girls who love
+                nature-themed fashion and comfort.</p>
             </div>
 
             <div class="m-info-group">
@@ -360,12 +279,15 @@
           <div class="modal-details">
             <h2 class="m-title">Sanrio Dress</h2>
             <div class="deal-discount-badge">24% OFF</div>
-            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱100</span> <span style="color: #E91E63; font-weight: bold;">₱74</span></p>
+            <p class="m-price"><span style="font-size: 0.8em; text-decoration: line-through; color: #999;">₱100</span>
+              <span style="color: #E91E63; font-weight: bold;">₱74</span>
+            </p>
             <hr class="m-divider">
 
             <div class="m-info-group">
               <label>Description</label>
-              <p>Beautiful blue floral seersucker dress with charming character details. Lightweight and perfect for warm weather adventures.</p>
+              <p>Beautiful blue floral seersucker dress with charming character details. Lightweight and perfect for
+                warm weather adventures.</p>
             </div>
 
             <div class="m-info-group">
@@ -403,6 +325,8 @@
       <a href="#deals" class="modal-closer"></a>
     </div>
     <!-- End of Modal for Deal 3 -->
+  </div>
+
   </div>
   <!-- End of the Deal Section -->
 
@@ -726,8 +650,9 @@
       </div>
       <!-- End of Modal 5-->
 
+      <!-- PRODUCT 6 -->
       <div class="grid-box">
-        <a href="#product6" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product6" style="text-decoration:none;color:inherit;">
           <div class="image-wrapper">
             <img src="CSS/ASSETS/The Golden Marigold Dress.png" alt="Dress">
             <span class="tag">Dresses</span>
@@ -743,7 +668,6 @@
         </a>
       </div>
 
-      <!-- Modal for Product 6 -->
       <div id="product6" class="modal-overlay">
         <div class="modal-card">
           <a href="#0" class="close-x">&times;</a>
@@ -781,17 +705,17 @@
         </div>
         <a href="#products" class="modal-closer"></a>
       </div>
-      <!-- End of Modal 6-->
 
+      <!-- PRODUCT 7 -->
       <div class="grid-box">
-        <a href="#product7" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product7" style="text-decoration:none;color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/Rose Quartz Lace Dress.png" alt="Dress">
+            <img src="CSS/ASSETS/Rose Quartz Lace Dress.png">
             <span class="tag">Dresses</span>
           </div>
           <div class="product-info">
             <h3 class="title">Rose Quartz Dress</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.9)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱65</p>
               <span class="cart-btn">View Details</span>
@@ -811,7 +735,8 @@
               <p class="m-price">₱65</p>
               <hr class="m-divider">
               <div class="m-info-group"><label>Description</label>
-                <p>Elegant pastel pink dress with delicate lace detailing, perfect for formal events and photo shoots.</p>
+                <p>Elegant pastel pink dress with delicate lace detailing, perfect for formal events and photo shoots.
+                </p>
               </div>
               <div class="m-info-group"><label>Fabric/Material</label>
                 <p>Premium Lace with Cotton Lining</p>
@@ -840,15 +765,16 @@
       </div>
       <!-- End of Modal 7-->
 
+      <!-- PRODUCT 8 -->
       <div class="grid-box">
-        <a href="#product8" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product8" style="text-decoration:none; color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/Terra Cotta Earth-Tone Dress.png" alt="Dress">
+            <img src="CSS/ASSETS/Terra Cotta Earth-Tone Dress.png">
             <span class="tag">Dresses</span>
           </div>
           <div class="product-info">
             <h3 class="title">Terra Cotta Dress</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.7)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱65</p>
               <span class="cart-btn">View Details</span>
@@ -897,15 +823,16 @@
       </div>
       <!-- End of Modal 8-->
 
+      <!-- PRODUCT 9 -->
       <div class="grid-box">
-        <a href="#product9" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product9" style="text-decoration:none; color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/The Radiant Raspberry.png" alt="Dress">
+            <img src="CSS/ASSETS/The Radiant Raspberry.png">
             <span class="tag">Dresses</span>
           </div>
           <div class="product-info">
             <h3 class="title">Radiant Raspberry</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.9)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱70</p>
               <span class="cart-btn">View Details</span>
@@ -925,7 +852,8 @@
               <p class="m-price">₱70</p>
               <hr class="m-divider">
               <div class="m-info-group"><label>Description</label>
-                <p>A vibrant raspberry-colored dress that turns heads at any gathering. Sophisticated yet playful design.</p>
+                <p>A vibrant raspberry-colored dress that turns heads at any gathering. Sophisticated yet playful
+                  design.</p>
               </div>
               <div class="m-info-group"><label>Fabric/Material</label>
                 <p>Premium Cotton Jersey</p>
@@ -954,15 +882,16 @@
       </div>
       <!-- End of Modal 9-->
 
+      <!-- PRODUCT 10 -->
       <div class="grid-box">
-        <a href="#product10" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product10" style="text-decoration:none; color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/The Peachy Keen Two-Piece.png" alt="Dress">
+            <img src="CSS/ASSETS/The Peachy Keen Two-Piece.png">
             <span class="tag">Ternos</span>
           </div>
           <div class="product-info">
             <h3 class="title">Peachy Keen Two-Piece</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.8)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱75</p>
               <span class="cart-btn">View Details</span>
@@ -982,7 +911,8 @@
               <p class="m-price">₱75</p>
               <hr class="m-divider">
               <div class="m-info-group"><label>Description</label>
-                <p>Adorable peachy two-piece terno set perfect for fiestas, birthdays, and special celebrations with friends.</p>
+                <p>Adorable peachy two-piece terno set perfect for fiestas, birthdays, and special celebrations with
+                  friends.</p>
               </div>
               <div class="m-info-group"><label>Fabric/Material</label>
                 <p>Premium Challis with Lace Trim</p>
@@ -1011,15 +941,16 @@
       </div>
       <!-- End of Modal 10-->
 
+      <!-- PRODUCT 11 -->
       <div class="grid-box">
-        <a href="#product11" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product11" style="text-decoration:none; color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/Wildflower Tiered Dress.png" alt="Dress">
+            <img src="CSS/ASSETS/Wildflower Tiered Dress.png">
             <span class="tag">Dresses</span>
           </div>
           <div class="product-info">
             <h3 class="title">Wildflower Tiered Dress</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.9)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱68</p>
               <span class="cart-btn">View Details</span>
@@ -1039,7 +970,8 @@
               <p class="m-price">₱68</p>
               <hr class="m-divider">
               <div class="m-info-group"><label>Description</label>
-                <p>A charming tiered dress featuring vibrant wildflower prints with comfortable, flowing layers perfect for summer fun.</p>
+                <p>A charming tiered dress featuring vibrant wildflower prints with comfortable, flowing layers perfect
+                  for summer fun.</p>
               </div>
               <div class="m-info-group"><label>Fabric/Material</label>
                 <p>Lightweight Cotton Voile</p>
@@ -1068,15 +1000,16 @@
       </div>
       <!-- End of Modal 11-->
 
+      <!-- PRODUCT 12 -->
       <div class="grid-box">
-        <a href="#product12" style="text-decoration: none; color: inherit; cursor: pointer;">
+        <a href="#product12" style="text-decoration:none; color:inherit;">
           <div class="image-wrapper">
-            <img src="CSS/ASSETS/The Radiant Raspberry.png" alt="Dress">
+            <img src="CSS/ASSETS/The Radiant Raspberry.png">
             <span class="tag">Dresses</span>
           </div>
           <div class="product-info">
             <h3 class="title">Coral Summer Dress</h3>
-            <div class="stars">⭐⭐⭐⭐⭐ <span class="count">(4.9)</span></div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
             <div class="price-action-row">
               <p class="price">₱72</p>
               <span class="cart-btn">View Details</span>
@@ -1085,47 +1018,50 @@
         </a>
       </div>
 
-      <!-- Modal for Product 12 -->
-      <div id="product12" class="modal-overlay">
-        <div class="modal-card">
-          <a href="#0" class="close-x">&times;</a>
-          <div class="modal-flex">
-            <div class="modal-img"><img src="CSS/ASSETS/The Radiant Raspberry.png" alt="Dress"></div>
-            <div class="modal-details">
-              <h2 class="m-title">Coral Summer Dress</h2>
-              <p class="m-price">₱72</p>
-              <hr class="m-divider">
-              <div class="m-info-group"><label>Description</label>
-                <p>A beautiful coral-colored summer dress with a breezy, relaxed fit that's perfect for warm weather adventures.</p>
+      < <!-- Modal for Product 12 -->
+        <div id="product12" class="modal-overlay">
+          <div class="modal-card">
+            <a href="#0" class="close-x">&times;</a>
+            <div class="modal-flex">
+              <div class="modal-img"><img src="CSS/ASSETS/The Radiant Raspberry.png" alt="Dress"></div>
+              <div class="modal-details">
+                <h2 class="m-title">Coral Summer Dress</h2>
+                <p class="m-price">₱72</p>
+                <hr class="m-divider">
+                <div class="m-info-group"><label>Description</label>
+                  <p>A beautiful coral-colored summer dress with a breezy, relaxed fit that's perfect for warm weather
+                    adventures.</p>
+                </div>
+                <div class="m-info-group"><label>Fabric/Material</label>
+                  <p>Lightweight Cotton Blend</p>
+                </div>
+                <div class="m-info-group"><label>Available Sizes</label>
+                  <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div>
+                </div>
+                <div class="m-info-group"><label>Available Colors</label>
+                  <div class="m-chips"><span>Coral</span> <span>Cream</span></div>
+                </div>
+                <div class="m-info-group"><label>Availability</label>
+                  <p class="m-stock">In Stock - 19 pieces available</p>
+                </div>
+                <div class="m-info-group"><label>Care Instructions</label>
+                  <ul class="m-list">
+                    <li>Machine wash cold</li>
+                    <li>Gentle cycle</li>
+                    <li>Hang to dry in shade</li>
+                  </ul>
+                </div>
+                <button class="m-btn">🛒 Add to Cart</button>
               </div>
-              <div class="m-info-group"><label>Fabric/Material</label>
-                <p>Lightweight Cotton Blend</p>
-              </div>
-              <div class="m-info-group"><label>Available Sizes</label>
-                <div class="m-chips"><span>5-6 yrs</span> <span>7-8 yrs</span> <span>9-10 yrs</span></div>
-              </div>
-              <div class="m-info-group"><label>Available Colors</label>
-                <div class="m-chips"><span>Coral</span> <span>Cream</span></div>
-              </div>
-              <div class="m-info-group"><label>Availability</label>
-                <p class="m-stock">In Stock - 19 pieces available</p>
-              </div>
-              <div class="m-info-group"><label>Care Instructions</label>
-                <ul class="m-list">
-                  <li>Machine wash cold</li>
-                  <li>Gentle cycle</li>
-                  <li>Hang to dry in shade</li>
-                </ul>
-              </div>
-              <button class="m-btn">🛒 Add to Cart</button>
             </div>
           </div>
+          <a href="#products" class="modal-closer"></a>
         </div>
-        <a href="#products" class="modal-closer"></a>
-      </div>
-      <!-- End of Modal 12-->
+        <!-- End of Modal 12-->
     </div>
   </div>
+  <!-- End of Modal 12-->
+
   <!-- End of Products Section -->
 
   <!-- Reviews Section --> <!--***HARVEY DONE***-->
@@ -1138,23 +1074,23 @@
 
       <div class="stats-summary-box">
         <div class="left-score">
-          <p class="big-score">4.9</p>
+          <p class="big-score">4.8</p>
           <div class="stars big-stars">⭐⭐⭐⭐⭐</div>
-          <p class="based-on">Based on 9 reviews</p>
+          <p class="based-on">Based on 6 reviews</p>
         </div>
 
         <div class="right-bars">
           <div class="bar-row">
             <span>5 Stars</span>
             <div class="bar-track">
-              <div class="bar-fill" style="width: 89%;"></div>
+              <div class="bar-fill" style="width: 83%;"></div>
             </div>
-            <span class="count">8</span>
+            <span class="count">5</span>
           </div>
           <div class="bar-row">
             <span>4 Stars</span>
             <div class="bar-track">
-              <div class="bar-fill" style="width: 11%;"></div>
+              <div class="bar-fill" style="width: 17%;"></div>
             </div>
             <span class="count">1</span>
           </div>
@@ -1171,7 +1107,8 @@
       <div class="reviews-grid">
         <div class="review-card">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Ang ganda ng quality ng mga dress! Swak na swak sa anak ko. Very comfortable din daw sabi
+          <p class="feedback">Ang ganda ng quality ng mga dress! Swak na swak sa anak ko. Very comfortable din daw
+            sabi
             niya. Napaka-highly recommended!</p>
           <div class="customer-info-row">
             <div class="left-customer">
@@ -1197,7 +1134,8 @@
 
         <div class="review-card">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Sobrang sulit! Ang ganda ng tahi at ang tibay ng tela. Yung anak ko parati na lang gusto
+          <p class="feedback">Sobrang sulit! Ang ganda ng tahi at ang tibay ng tela. Yung anak ko parati na lang
+            gusto
             isuot yung dress na binili namin.</p>
           <div class="customer-info-row">
             <div class="left-customer">
@@ -1210,7 +1148,8 @@
 
         <div class="review-card">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Very satisfied sa purchase! Ang cute ng designs at ang affordable. Will definitely order
+          <p class="feedback">Very satisfied sa purchase! Ang cute ng designs at ang affordable. Will definitely
+            order
             again!</p>
           <div class="customer-info-row">
             <div class="left-customer">
@@ -1223,7 +1162,8 @@
 
         <div class="review-card">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Maganda ang quality ng damit. Yung size lang medyo malaki konti pero okay lang naman kasi
+          <p class="feedback">Maganda ang quality ng damit. Yung size lang medyo malaki konti pero okay lang naman
+            kasi
             lalaki pa naman ang anak ko.</p>
           <div class="customer-info-row">
             <div class="left-customer">
@@ -1242,42 +1182,6 @@
             <div class="left-customer">
               <h4 class="name">Grace Fernandez</h4>
               <p class="date-purchased">Feb 25, 2026 | Regina Dress-Size 8</p>
-            </div>
-            <div class="right-verified">✔️ Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Ang bilis ng shipping! Napakaganda ng packaging at higit sa lahat ang ganda ng fit ng dress sa anak ko. Hindi ako mag-aatubiling bumili ulit!</p>
-          <div class="customer-info-row">
-            <div class="left-customer">
-              <h4 class="name">Liza Dela Cruz</h4>
-              <p class="date-purchased">March 12, 2026 | Wildflower Tiered Dress-Size 6</p>
-            </div>
-            <div class="right-verified">✔️ Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">First time ko umorder at sobrang satisfied ako! Yung Rose Quartz Dress ay perfect para sa birthday party ng anak ko. Maraming nagtanong kung saan ko binili!</p>
-          <div class="customer-info-row">
-            <div class="left-customer">
-              <h4 class="name">Patricia Gomez</h4>
-              <p class="date-purchased">March 14, 2026 | Rose Quartz Dress-Size 8</p>
-            </div>
-            <div class="right-verified">✔️ Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p class="feedback">Consistently maganda ang quality ng mga dresses! Pang-tatlong order ko na ito at never akong nabigo. Affordable pero hindi mukhang mura. Highly recommended!</p>
-          <div class="customer-info-row">
-            <div class="left-customer">
-              <h4 class="name">Michelle Tan</h4>
-              <p class="date-purchased">March 15, 2026 | Coral Summer Dress-Size 9</p>
             </div>
             <div class="right-verified">✔️ Verified</div>
           </div>
@@ -1303,20 +1207,24 @@
         <h1>About Yhanyhan RTW Shop</h1>
 
         <p class="paragraph1">
-          Founded in 2022 by<b> Eljohn and Mae Balajadia</b>, Yhanyhan RTW Shop is located at <b>Taytay Tiangge, Taytay,
-            Rizal.</b> We specialize in <b>ready-to-wear dresses and ternos </b>for young girls aged 5 to 10 years old,
+          Founded in 2022 by<b> Eljohn and Mae Balajadia</b>, Yhanyhan RTW Shop is located at <b>Taytay Tiangge,
+            Taytay,
+            Rizal.</b> We specialize in <b>ready-to-wear dresses and ternos </b>for young girls aged 5 to 10 years
+          old,
           featuring
           original designs created by the owners themselves.
         </p>
 
         <p class="paragraph2">
-          Since our establishment, we've grown to <b>offer over 50 different designs</b> of kids' dresses and ternos -
+          Since our establishment, we've grown to <b>offer over 50 different designs</b> of kids' dresses and ternos
+          -
           all
           crafted to be stylish, affordable, and made with quality materials that parents can trust.
         </p>
 
         <p class="paragraph3">
-          We're now expanding our reach online to make it easier for more customers to discover and shop our collection
+          We're now expanding our reach online to make it easier for more customers to discover and shop our
+          collection
           from anywhere.
         </p>
       </div>
@@ -1350,13 +1258,8 @@
       <h2>Visit Us at Taytay Tiangge</h2>
       <div class="about-map-wrapper">
         <iframe
-          src="https://www.google.com/maps?q=Taytay+Tiangge,+Taytay,+Rizal&output=embed"
-          width="100%"
-          height="420"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.8828105041118!2d121.13074779510497!3d14.555391352163207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c75abd004845%3A0x271b03a783b4a383!2sTiangge%20ni%20Manang%20Biday!5e0!3m2!1sen!2sus!4v1777359370552!5m2!1sen!2sus"
+          loading="lazy" allowfullscreen>
         </iframe>
       </div>
     </div>
@@ -1377,7 +1280,8 @@
         <img src="CSS/ASSETS/mission.png" alt="Mission Image">
         <h2>Our Mission</h2>
         <p>To empower and support local designers by providing stylish, comfortable,
-          and high-quality ready-to-wear dresses and ternos for girls aged 5-10 years old, to showcase original designs,
+          and high-quality ready-to-wear dresses and ternos for girls aged 5-10 years old, to showcase original
+          designs,
           and
           to strengthen the shop's presence.
         </p>
@@ -1436,23 +1340,50 @@
 
   <!-- End of VMGO Section-->
 
-  <!-- START OF CTA ACTION SECTION --> <!--***MARK DONE***-->
-  <section id="contact" class="cta">
-    <div class="main-container">
+  <section id="contact" class="cta-section">
+    <div class="cta-header">
       <h2>Ready to Shop for Your Kids?</h2>
       <p class="cta-description">Get in touch with us today! We're here to help you find the perfect outfits for your
         children.</p>
+    </div>
 
-      <div class="main-buttons">
-        <button class="btn-Call"> Call Us Now </button>
-        <button class="btn-WhatsApp"> Message on WhatsApp </button>
-        <button class="btn-Email"> Email Us</button>
+    <div class="main-container contact-wrapper">
+      <div class="contact-form-container">
+        <h3>Inquire for Orders</h3>
+        <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="email" placeholder="Email Address">
+          <textarea placeholder="Ano ang item na gusto mong i-order? (e.g., Kid's Terno, Dress, etc.)"
+            rows="5"></textarea>
+          <button type="submit" class="btn-submit">SEND INQUIRY</button>
+        </form>
       </div>
 
+      <div class="contact-info-container">
+        <div class="phone-header">
+          <span>📞 Contact Yhanyhan: (419) 465-4611</span>
+        </div>
+
+        <div class="info-box schedule-box">
+          <div class="inner-border">
+            <p>OPEN FOR RESELLERS & BULK ORDERS</p>
+            <small>Get discounts for 12pcs up!</small>
+          </div>
+        </div>
+
+        <div class="info-box rtw-pricing-box">
+          <h4>LOOKING FOR WHOLESALE PRICING?</h4>
+          <p>Tingnan ang ating latest pricelist para sa mga resellers.</p>
+          <button class="btn-quote">DOWNLOAD PRICELIST</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-footer">
       <p class="availability">Available Monday - Saturday, 9:00 AM - 6:00 PM</p>
     </div>
   </section>
-  <!-- END OF CTA ACTION SECTION -->
 
   <!-- START OF FOOTER SECTION --> <!--DONE MARK-->
   <footer class="footer">
@@ -1462,7 +1393,8 @@
           <img src="CSS/ASSETS/Yhanyhan logo with bg.png" alt="Logo">
           <h4>Yhanyhan's RTW Shop</h4>
         </div>
-        <p class="description">Original RTW dresses & ternos for girls aged 5-10, proudly from Taytay Tiangge, Rizal.
+        <p class="description">Original RTW dresses & ternos for girls aged 5-10, proudly from Taytay Tiangge,
+          Rizal.
         </p>
       </div>
 
@@ -1508,6 +1440,56 @@
     </div>
   </footer>
   <!-- End of the Footer Section -->
+
+  <div class="bot-wrapper">
+
+    <!-- toggle -->
+    <input type="checkbox" id="botToggle" hidden>
+
+    <!-- floating button -->
+    <label for="botToggle" class="bot-fab">
+      💬
+    </label>
+
+    <!-- MODAL -->
+    <div class="bot-modal">
+
+      <!-- HEADER -->
+      <div class="bot-header">
+        <div class="bot-left">
+          <div class="bot-icon">🤖</div>
+          <div>
+            <h4>Bot</h4>
+            <small>Online</small>
+          </div>
+        </div>
+
+        <label for="botToggle" class="bot-close">✕</label>
+      </div>
+
+      <!-- BODY -->
+      <div class="bot-body">
+        <div class="bot-message">
+          Hey 👋 I'm YhanBot 🤖 Got any questions? Feel free to type them below.
+        </div>
+
+        <!-- quick buttons -->
+        <div class="bot-quick">
+          <button disabled>FAQ</button>
+          <button disabled>About ChatBot</button>
+          <button disabled>Pricing</button>
+        </div>
+      </div>
+
+      <!-- INPUT -->
+      <div class="bot-input">
+        <input type="text" placeholder="Send a message..." disabled>
+        <button disabled>➤</button>
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 
