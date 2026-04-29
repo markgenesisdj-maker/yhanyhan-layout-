@@ -15,8 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: sans-serif;
-
+  ;
+  font-family: Verdana;
 }
 
 /* Hero Carousel */
@@ -28,7 +28,6 @@ body {
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
-
 }
 
 .hero-slides {
@@ -48,11 +47,7 @@ body {
   width: 400px;
   height: 500px;
   border-radius: 20px;
-
 }
-
-
-
 
 @keyframes autoSlide {
   0% {
@@ -63,35 +58,26 @@ body {
     transform: translateX(0%);
   }
 
-  /* hold slide 1 for ~7s */
   33.33% {
     transform: translateX(-33.33%);
   }
 
-  /* transition to slide 2 */
   61.33% {
     transform: translateX(-33.33%);
   }
 
-  /* hold slide 2 for ~7s */
   66.66% {
     transform: translateX(-66.66%);
   }
 
-  /* transition to slide 3 */
   94.66% {
     transform: translateX(-66.66%);
   }
 
-  /* hold slide 3 for ~7s */
   100% {
     transform: translateX(0%);
   }
-
-  /* loop back */
 }
-
-
 /* End of Carousel */
 
 /* Start of Navigation */
@@ -105,7 +91,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 4%;
-  background: #FFECEE;
+  background: #ffffff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -122,7 +108,7 @@ nav {
 .logo h2 {
   font-size: 22px;
   font-family: sans-serif;
-  color: #E91E63;
+  color: #FB6F92;
   white-space: nowrap;
   font-weight: bolder;
 }
@@ -146,7 +132,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #E91E63;
+  color: #FB6F92;
 }
 
 .search-box {
@@ -157,7 +143,7 @@ nav {
 .search-container-style {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, #E91E63, #F06292);
+  background: linear-gradient(to right, #FB6F92, #F06292);
   border-radius: 30px;
   padding: 5px 15px;
 }
@@ -178,7 +164,7 @@ nav {
 .search-btn-pink {
   border: none;
   background: #fff;
-  color: #E91E63;
+  color: #FB6F92;
   padding: 6px 12px;
   border-radius: 20px;
   cursor: pointer;
@@ -186,7 +172,6 @@ nav {
 }
 
 /* Hamburger Navigation Bar*/
-
 #nav-toggle {
   display: none;
 }
@@ -201,13 +186,11 @@ nav {
   padding: 4px;
 }
 
-
-
 .hamburger span {
   display: block;
   width: 26px;
   height: 3px;
-  background: #E91E63;
+  background: #FB6F92;
   border-radius: 3px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -244,9 +227,7 @@ nav {
   .logo h2 {
     font-size: 16px;
   }
-
 }
-
 /* End of Navigation */
 
 /* START OF HOMEPAGE SECTION */
@@ -286,17 +267,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 999;
 }
 
 .homepage-section {
   padding: 0px 10%;
-  background: linear-gradient(to right, #ffffff, #fff5f7);
+  background: radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%);
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 .main-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 
 .main-product {
@@ -304,7 +292,7 @@ nav {
 }
 
 .badge {
-  background: #E92063;
+  background: #FB6F92;
   color: #fff;
   padding: 5px 12px;
   border-radius: 15px;
@@ -326,7 +314,7 @@ nav {
 }
 
 .btn-Shop {
-  background: #E91E63;
+  background: #FB6F92;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -343,8 +331,8 @@ nav {
 
 .btn-View {
   background: transparent;
-  border: 1px solid #E91E63;
-  color: #E91E63;
+  border: 1px solid #FB6F92;
+  color: #FB6F92;
   padding: 12px 25px;
   border-radius: 25px;
   cursor: pointer;
@@ -354,9 +342,6 @@ nav {
 .btn-View:hover {
   transform: scale(0.95);
 }
-
-
-
 
 .promo-tag {
   position: absolute;
@@ -380,15 +365,16 @@ nav {
 
 /* START OF DEALS SECTION */
 :root {
-  --primary-pink: #e91e63;
+  --primary-pink: #FB6F92;
   --light-pink: #fce4ec;
   --text-dark: #333;
   --text-gray: #777;
 }
 
 .deal-section {
-  padding: 120px 20px;
-  font-family: sans-serif;
+  padding: 140px 20px;
+  font-family: Verdana;
+  background: linear-gradient(to right, #ffffff, #fff5f7);
 
 }
 
@@ -550,8 +536,20 @@ nav {
 /* Products Section */
 .product-container {
   padding: 120px 20px;
-  font-family: sans-serif;
+  font-family: Verdana;
+  min-height: 100vh;
+  width: 100%;
   background: linear-gradient(to right, #ffffff, #fff5f7);
+
+  overflow: hidden;
+
+}
+
+.product-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .grid-container {
@@ -594,7 +592,7 @@ nav {
 }
 
 .second-container p {
-  font-family: sans-serif;
+  font-family: "Verdana";
   color: gray;
   line-height: 1.1;
   font-size: 1.1rem;
@@ -639,7 +637,7 @@ nav {
 }
 
 .title {
-  font-family: "Arial Black", sans-serif;
+  font-family: "Verdana";
   font-size: 1.1rem;
   color: #000;
   margin: 0;
@@ -666,7 +664,7 @@ nav {
 .price {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #e91e63;
+  color: #FB6F92;
   margin: 0;
   font-family: Verdana;
 }
@@ -677,7 +675,7 @@ nav {
 }
 
 .cart-btn {
-  background-color: #e91e63;
+  background-color: #FB6F92;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -773,7 +771,7 @@ nav {
 }
 
 .m-price {
-  color: #e91e63;
+  color: #FB6F92;
   font-size: 2rem;
   font-weight: 900;
   margin: 5px 0;
@@ -826,7 +824,7 @@ nav {
 
 .m-btn {
   width: 100%;
-  background: #e91e63;
+  background: #FB6F92;
   color: white;
   border: none;
   padding: 15px;
@@ -870,9 +868,8 @@ nav {
 
 /* Review Section */
 .reviews-wrapper {
-  font-family: sans-serif;
-  background-color: #ffffff;
-  padding: 120px 20px;
+  font-family: Verdana;
+  background: linear-gradient(to right, #ffffff, #fff5f7);
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -916,6 +913,7 @@ nav {
   margin-bottom: 3rem;
   align-items: center;
   box-sizing: border-box;
+  background: white;
 
 }
 
@@ -955,7 +953,7 @@ nav {
 
 .bar-fill {
   height: 100%;
-  background: #e91e63;
+  background: #FB6F92;
   border-radius: 10px;
 }
 
@@ -976,6 +974,7 @@ nav {
   justify-content: space-between;
   box-sizing: border-box;
   min-width: 0;
+  background: #ffffff;
 }
 
 .stars {
@@ -1027,7 +1026,7 @@ nav {
 }
 
 .review-btn {
-  background: #e91e63;
+  background: #FB6F92;
   color: #fff;
   border: none;
   padding: 1rem 3rem;
@@ -1046,17 +1045,14 @@ nav {
   box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
 }
 
-/* Itago ang modal by default */
 .modal {
   display: none;
-  /* Default na nakatago */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  /* Madilim na background overlay */
   backdrop-filter: blur(8px);
   justify-content: center;
   align-items: center;
@@ -1074,18 +1070,16 @@ nav {
   text-align: center;
 }
 
-/* ETO ANG MAGIC: Pag naka-check ang invisible checkbox, lalabas ang modal */
 #modal-toggle:checked~.modal {
   display: flex;
 }
 
 .submit-review-btn {
-  background: #e91e63;
+  background: #FB6F92;
   color: white;
   border: none;
   padding: 12px 25px;
   width: 100%;
-  /* Full width para madaling pindutin */
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;
@@ -1105,7 +1099,6 @@ nav {
   transform: translateY(0);
 }
 
-/* Form Group spacing */
 .form-group {
   text-align: left;
   margin-bottom: 15px;
@@ -1128,10 +1121,9 @@ nav {
   font-family: inherit;
 }
 
-/* Gawing mukhang button ang label */
 .review-btn {
   display: inline-block;
-  background: #e91e63;
+  background: #FB6F92;
   color: #fff;
   padding: 1rem 3rem;
   border-radius: 50px;
@@ -1141,7 +1133,6 @@ nav {
   box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
 }
 
-/* Close button style */
 .close-modal {
   position: absolute;
   right: 25px;
@@ -1151,7 +1142,6 @@ nav {
   color: #888;
 }
 
-/* Modal box animation */
 #modal-toggle:checked~.modal .modal-content {
   animation: modalPop 0.3s ease-out;
 }
@@ -1167,7 +1157,6 @@ nav {
     opacity: 1;
   }
 }
-
 /* End of Review Section */
 
 /* VMGO SECTION */
@@ -1195,7 +1184,7 @@ nav {
 }
 
 .about-map-section h2 {
-  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  font-family: 'Verdana';
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #000;
@@ -1231,7 +1220,7 @@ nav {
 }
 
 .history-container h1 {
-  font-family: 'Arial Black', sans-serif;
+  font-family: 'Verdana';
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #000;
@@ -1277,7 +1266,7 @@ nav {
 }
 
 .right-content h1 {
-  color: rgb(255, 9, 153);
+  color: #F06292;
   font-weight: bold;
   font-family: sans-serif;
 }
@@ -1316,7 +1305,7 @@ nav {
 
 .vmgo-card:hover {
   transform: translateY(-5px);
-  border-color: #E92063;
+  border-color: #fb6f92;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -1325,7 +1314,7 @@ nav {
   width: 50px;
   height: 50px;
   background-color: #fce4ec;
-  color: #E92063;
+  color: #fb6f92;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1336,7 +1325,7 @@ nav {
 }
 
 .vmgo-card:hover .icon-circle {
-  background-color: #E92063;
+  background-color: #fb6f92;
   color: #ffffff;
 }
 
@@ -1519,16 +1508,13 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect para magmukhang interactive */
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(233, 30, 99, 0.1);
 }
 
-/* Ang icon wrapper na may kulay (Pink/Lavender version nung blue) */
 .icon-wrapper {
   background-color: #fce4ec;
-  /* Light Pink Background */
   width: 70px;
   height: 70px;
   border-radius: 20px;
@@ -1540,7 +1526,7 @@ nav {
 
 .icon-wrapper i {
   font-size: 1.8rem;
-  color: #e91e63;
+  color: #FB6F92;
 }
 
 .feature-card h2 {
@@ -1554,16 +1540,12 @@ nav {
 .feature-card p {
   font-family: 'Verdana', sans-serif;
   color: #777;
-  /* Soft gray para sa text */
   font-size: 0.85rem;
   line-height: 1.5;
   margin: 0;
 }
 
-/* =========================
-   CTA SECTION - MODERN FIXED
-   ========================= */
-
+/* CTA SECTION */
 .cta-section {
   padding: 120px 20px 0px 20px;
   background: linear-gradient(to right, #ffffff, #fff3f8);
@@ -1572,7 +1554,6 @@ nav {
   align-items: center;
 }
 
-/* HEADER */
 .cta-header {
   text-align: center;
   max-width: 800px;
@@ -1582,7 +1563,7 @@ nav {
 .cta-header h2 {
   font-size: 50px;
   font-weight: 900;
-  color: #e91e63;
+  color: #FB6F92;
   margin-top: 0;
   margin-bottom: 15px;
   line-height: 1.2;
@@ -1594,7 +1575,6 @@ nav {
   line-height: 1.3;
 }
 
-/* MAIN BOX */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -1606,12 +1586,11 @@ nav {
   margin-bottom: 15px;
 }
 
-/* LEFT FORM */
 .contact-form-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: #e91e63;
+  background: #FB6F92;
   padding: 45px;
   border-radius: 28px;
   box-shadow: 0 20px 35px rgba(233, 30, 99, 0.18);
@@ -1646,10 +1625,9 @@ nav {
   resize: none;
 }
 
-/* BUTTON */
 .btn-submit {
   margin-top: 10px;
-  background: #111;
+  background: #f88ba6;
   color: #fff;
   border: none;
   padding: 16px;
@@ -1664,26 +1642,23 @@ nav {
   transform: translateY(-3px);
 }
 
-/* RIGHT SIDE */
 .contact-info-container {
   display: flex;
   flex-direction: column;
   gap: 22px;
 }
 
-/* PHONE */
 .phone-header {
   background: #fff;
   padding: 20px 25px;
   border-radius: 20px;
   font-size: 1.05rem;
   font-weight: 800;
-  color: #e91e63;
+  color: #FB6F92;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
-/* BOXES */
 .info-box {
   background: #fff;
   border-radius: 24px;
@@ -1693,9 +1668,8 @@ nav {
   width: 100%;
 }
 
-/* RESELLER */
 .schedule-box {
-  background: linear-gradient(135deg, #e91e63, #ff5f9e);
+  background: linear-gradient(135deg, #FB6F92, #ff5f9e);
   color: #fff;
   text-align: center;
 }
@@ -1710,13 +1684,12 @@ nav {
   font-size: 1rem;
 }
 
-/* PRICE LIST */
 .rtw-pricing-box {
   text-align: center;
 }
 
 .rtw-pricing-box h4 {
-  color: #e91e63;
+  color: #FB6F92;
   font-size: 1.5rem;
   margin-bottom: 12px;
 }
@@ -1728,7 +1701,7 @@ nav {
 }
 
 .btn-quote {
-  background: #e91e63;
+  background: #FB6F92;
   color: #fff;
   border: none;
   padding: 14px 24px;
@@ -1747,7 +1720,7 @@ nav {
 }
 
 .social-box h4 {
-  color: #e91e63;
+  color: #FB6F92;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
@@ -1777,8 +1750,7 @@ nav {
 .social-item i {
   font-size: 2rem;
   margin-bottom: 8px;
-  color: #e91e63;
-  /* Pink color consistent sa theme mo */
+  color: #FB6F92;
 }
 
 .social-item span {
@@ -1790,7 +1762,6 @@ nav {
   transform: translateY(-5px);
 }
 
-/* Hover colors para sa bawat platform */
 .social-item:hover i.fa-whatsapp {
   color: #25D366;
 }
@@ -1839,10 +1810,9 @@ nav {
 }
 
 /** FAQ Section */
-/** FAQ Section */
 .faq-section {
   padding: 60px 20px;
-  background: #fff5f8;
+  background: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #ec4899 100%);
   text-align: center;
 }
 
@@ -1850,7 +1820,7 @@ nav {
   font-family: 'Verdana', sans-serif;
   font-size: 45px;
   font-weight: bolder;
-  color: #e91e63;
+  color: #FB6F92;
   margin-bottom: 30px;
 }
 
@@ -1864,25 +1834,18 @@ nav {
   background: #fff;
   margin-bottom: 15px;
   border-radius: 12px;
-  /* Inalis ang padding dito para hindi double padding sa summary */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   cursor: pointer;
   overflow: hidden;
-  /* Para hindi lumabas ang p content sa border radius */
 }
 
-/* ETO ANG GAGAMOT SA FONT PROBLEM MO */
 .faq-container summary {
   font-family: 'Verdana', sans-serif;
-  /* Consistent sa branding mo */
   font-size: 1.2rem;
-  /* Sapat na laki (approx 20px) */
   font-weight: 700;
   padding: 20px 25px;
-  /* Spacing sa loob ng box */
   list-style: none;
-  /* Tinatago ang default arrow */
   color: #333;
   display: flex;
   justify-content: space-between;
@@ -1893,21 +1856,17 @@ nav {
   display: none;
 }
 
-/* Custom Icon (+ / -) */
 .faq-container summary::after {
   content: "\2b";
-  /* Plus sign code */
   font-size: 24px;
-  color: #e91e63;
+  color: #FB6F92;
   font-weight: bold;
 }
 
 .faq-container details[open] summary::after {
   content: "\2212";
-  /* Minus sign code */
 }
 
-/* Style para sa sagot (p tag) */
 .faq-container p {
   padding: 0 25px 20px 25px;
   color: #666;
@@ -1945,7 +1904,7 @@ nav {
 
 /* START OF FOOTER SECTION */
 .footer {
-  background: #E92063;
+  background: #F06292;
   padding: 60px 20px 30px;
   color: #ffffff;
   font-family: sans-serif;
@@ -1977,7 +1936,7 @@ nav {
 .footer .description {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #cccccc;
+  color: #ffffff;
   max-width: 250px;
   text-align: justify;
 }
@@ -1998,15 +1957,14 @@ nav {
 }
 
 .footer ul li a {
-  color: #cccccc;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s;
 }
 
 .footer ul li a:hover {
-  color: white;
-  font-size: 20px;
+  color: #ffb3c6;
 }
 
 .contact-item {
@@ -2014,7 +1972,7 @@ nav {
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
-  color: #cccccc;
+  color: #ffffff;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -2041,7 +1999,7 @@ nav {
 }
 
 .copyright {
-  color: #cccccceb;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 
@@ -2054,8 +2012,6 @@ nav {
   .hero-slides img {
     width: 80%;
     height: 65vh;
-
-
   }
 
   .hero-dots {
@@ -2071,7 +2027,6 @@ nav {
     display: flex;
   }
 
-  /* Collapse the nav-links by default */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -2080,20 +2035,17 @@ nav {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #FFECEE;
+    background: #ffecf9;
     padding: 20px 0;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
     gap: 18px;
     z-index: 1000;
-
   }
 
-  /* Reveal nav-links when checkbox is checked */
   #nav-toggle:checked~.nav-links {
     display: flex;
   }
 
-  /* Animate hamburger → X when open */
   #nav-toggle:checked~.hamburger span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
@@ -2106,19 +2058,15 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Keep nav tidy: logo on left, hamburger on right */
   nav {
     flex-wrap: nowrap;
     justify-content: space-between;
     position: sticky;
   }
 
-  /* Hide search bar on small screens to avoid clutter */
   .search-box {
     display: none;
   }
-
-
 }
 
 @media (max-width: 480px) {
@@ -2128,7 +2076,6 @@ nav {
 
   .vmgo-card {
     width: 100%;
-    /* Full width na siya sa phone */
   }
 
 
@@ -2136,9 +2083,7 @@ nav {
     width: 100%;
     border-radius: 20px;
   }
-
 }
-
 /* END OF FOOTER SECTION */
 
 /* ALL SECTIONS PADDING AND WIDTH */
@@ -2146,8 +2091,6 @@ nav {
   padding: 60px 20px;
   width: 100%;
 }
-
-
 
 @media (max-width: 480px) {
   .grid-container {
@@ -2179,9 +2122,7 @@ nav {
   .right-content {
     margin: 0 auto;
   }
-
 }
-
 
 /* TABLET */
 @media (max-width: 830px) {
@@ -2240,7 +2181,6 @@ nav {
 
   .vmgo-card {
     width: 300px;
-    /* Mas maliit nang konti sa tablet */
   }
 }
 
@@ -2258,7 +2198,6 @@ nav {
   position: relative;
 }
 
-/* floating button */
 .bot-fab {
   position: fixed;
   bottom: 20px;
@@ -2277,7 +2216,6 @@ nav {
   z-index: 999;
 }
 
-/* modal */
 .bot-modal {
   position: fixed;
   bottom: 90px;
@@ -2297,14 +2235,12 @@ nav {
   background-color: #ff4d6d;
 }
 
-/* SHOW ON CLICK */
 #botToggle:checked~.bot-modal {
   display: flex;
 }
 
-/* header */
 .bot-header {
-  background: #e91e63;
+  background: #FB6F92;
   color: white;
   padding: 12px;
   display: flex;
@@ -2329,14 +2265,12 @@ nav {
 
 }
 
-/* close */
 .bot-close {
   cursor: pointer;
   font-size: 18px;
   color: white;
 }
 
-/* body */
 .bot-body {
   flex: 1;
   padding: 12px;
@@ -2352,7 +2286,6 @@ nav {
   margin-bottom: 10px;
 }
 
-/* quick buttons */
 .bot-quick {
   display: flex;
   flex-wrap: wrap;
@@ -2361,16 +2294,15 @@ nav {
 
 .bot-quick button {
   padding: 5px 10px;
-  border: 1px solid #e91e63;
+  border: 1px solid #FB6F92;
   border-radius: 20px;
   font-size: 11px;
   background: white;
-  color: #e91e63;
+  color: #FB6F92;
 }
 
-/* input */
 .bot-input {
-  background: #e91e63;
+  background: #FB6F92;
   color: white;
   border: none;
   padding: 0 15px;
@@ -2388,4 +2320,43 @@ nav {
   color: white;
   border: none;
   padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .vmgocards-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 15px auto 0 0;
+    gap: 15px;
+  }
+
+  .vmgo-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .features-section {
+    margin: 15px;
+  }
+
+  .cta-section {
+    padding: 0;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+  .vmgocards-container {
+
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .vmgo-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 100%;
+  }
 }
